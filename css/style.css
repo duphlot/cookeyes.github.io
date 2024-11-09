@@ -165,12 +165,66 @@ footer {
     body{
         font: 12px Arial, sans-serif;
     }
+    .hero h1 {
+        font-size: 30px;
+    }
+    .hero .btn {
+        font-size: 12px;
+    }
+    footer {
+        font-size: 12px;
+    }
+    #team-introduction h2, #products h2 {
+        font-size: 24px;
+    }
+    #team-introduction ul li, #products ul li {
+        font-size: 16px;
+    }
+    #team-introduction .section-title h3, #products .section-title h3 {
+        font-size: 20px;
+    }
+    #team-introduction .section-title p, #team-introduction .section-title ul,
+    #products .section-title p, #products .section-title ul {
+        font-size: 16px;
+    }
+    .hero {
+        padding: 50px 0;
+    }
+    .navbar {
+        flex-direction: column;  /* Chia navbar thành hai phần: trên và dưới */
+        align-items: center;  /* Canh giữa các mục */
+    }
+    .navbar-logo {
+        margin-top: 0;
+    }
+    .navbar-nav {
+        flex-direction: column;  /* Chia các mục navbar thành dạng cột */
+        align-items: center;  /* Canh giữa các mục */
+        margin-top: 20px;
+    }
+    .navbar-nav .nav-item {
+        width: 100%;  /* Đảm bảo mỗi mục navbar chiếm toàn bộ chiều rộng */
+        text-align: center;  /* Canh giữa chữ trong từng mục */
+        padding: 10px 0;
+    }
+    .navbar-nav .nav-item.active {
+        background-color: unset;
+    }
+    .navbar-nav .nav-item.active .nav-link,
+    .navbar-nav .nav-item:hover {
+        color: #333;
+    }
     #team-introduction .container, #products .container, #contact .container{
         max-height: 65dvh;
-
     }
     .marquee-container {
         width: auto;
+    }
+    .navbar-toggler {
+        display: block;  /* Hiển thị nút toggle khi navbar đã được bố trí theo chiều dọc */
+    }
+    .navbar-collapse {
+        display: none;  /* Ẩn các mục navbar khi chưa được mở */
     }
     .navbar-nav {
         flex-direction:unset;  /* Đặt navbar thành dạng cột khi màn hình nhỏ */
