@@ -1,0 +1,181 @@
+body {
+    background: url('https://static.vecteezy.com/system/resources/thumbnails/023/116/073/small_2x/light-wood-floor-texture-generate-ai-photo.jpg') no-repeat fixed center/cover;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #333;
+}
+.carousel-inner {
+    border-radius: 30px;
+}
+.marquee-container {
+    background-color: #f8efd9;
+    border-radius: 10px;
+    padding: 0;
+    height: 30px;
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+    font: bold 10px Arial, sans-serif;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.navbar {
+    background: url('https://static.vecteezy.com/system/resources/thumbnails/023/116/073/small_2x/light-wood-floor-texture-generate-ai-photo.jpg') no-repeat center/cover, #e1c59a;
+    color: #fff;
+    margin: 20px 0 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.nav-item.custom-nav-item:nth-child(1) { background-color: hsl(227, 100%, 76%); }
+.nav-item.custom-nav-item:nth-child(2) { background-color: #BFECFF; border-radius: 10px 10px 0 0; max-width: 100px; }
+.nav-item.custom-nav-item:nth-child(3) { background-color: #CDC1FF; border-radius: 10px 10px 0 0; }
+.nav-item.custom-nav-item:nth-child(4) { background-color: #FFF6E3; border-radius: 10px 10px 0 0; }
+.nav-item.custom-nav-item:nth-child(5) { background-color: #FFCCEA; border-radius: 10px 10px 0 0; }
+
+.navbar-nav .nav-item {
+    margin: 0 5px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.navbar-logo {
+    height: 55px;
+    width: auto;
+    margin-top: -25px;
+    display: block;
+}
+
+.navbar-nav .nav-item.active {
+    background-color: #ff6f61;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover {
+    color: #fff;
+}
+
+.nav-item.custom-nav-item:hover {
+    opacity: 0.8;
+}
+
+.hero {
+    background-color: #f5f5f5;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: #fff;
+}
+
+.hero .btn {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+#team-introduction, #products, #contact {
+    background: url('https://static.vecteezy.com/system/resources/thumbnails/023/116/073/small_2x/light-wood-floor-texture-generate-ai-photo.jpg') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#team-introduction .container{
+    background-color: #BFECFF;
+}
+#products .container{
+    background-color: #CDC1FF;
+}
+#contact .container{
+    background-color: #FFF6E3;
+}
+#product-filters button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+#team-introduction .container, #products .container, #contact .container{
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 30px;
+    max-width: 1200px;
+    max-height: 85vh;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+}
+
+#team-introduction h2, #products h2 {
+    font-size: 32px;
+    color: #2f4f4f;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#team-introduction ul, #products ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#team-introduction ul li, #products ul li {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#team-introduction .section-title h3, #products .section-title h3 {
+    font-size: 24px;
+    color: #ff6f61;
+    margin-bottom: 15px;
+}
+
+#team-introduction .section-title p, #team-introduction .section-title ul, 
+#products .section-title p, #products .section-title ul {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+/* Khi màn hình nhỏ (smartphone), chia các mục navbar thành hai phần: trên và dưới */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction:unset;  /* Đặt navbar thành dạng cột khi màn hình nhỏ */
+        align-items: center;  /* Canh giữa các mục */
+        margin-top: 20px;
+    }
+
+    .navbar-nav .nav-item {
+        width: 20%;  /* Đảm bảo mỗi mục navbar chiếm toàn bộ chiều rộng */
+        text-align: center;  /* Canh giữa chữ trong từng mục */
+        padding: 10px 0;
+    }
+
+    /* Đảm bảo các mục navbar không bị ẩn */
+    .navbar-collapse {
+        display: block !important;  /* Bỏ phần collapse để tất cả các mục navbar đều hiển thị */
+    }
+
+    .navbar-toggler {
+        display: none;  /* Ẩn nút toggle khi navbar đã được bố trí theo chiều dọc */
+    }
+}

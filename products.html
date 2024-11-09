@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự Án Cộng Đồng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/draws.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                        <a class="nav-link" href="#"><div class="marquee-container d-flex justify-content-between align-items-center">
+                            <marquee class="marquee-text">Chào mừng bạn đến với Dự Án Cộng Đồng! Hãy tham gia mua sắm để giúp đỡ các em nhỏ mồ côi không có gia đình.</marquee>
+                        </div></a>
+                    <li class="nav-item custom-nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item custom-nav-item">
+                        <a class="nav-link" href="products.html">PRODUCTS</a>
+                    </li>
+                    <li class="nav-item custom-nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </li>
+                    <li class="nav-item custom-nav-item">
+                        <a class="nav-link" href="#">PEOPLE</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Section -->
+    <section id="products">
+        <div class="container">
+            <section id="product-filters">
+                <button class="btn btn-outline-primary me-2">All Products</button>
+                <button class="btn btn-outline-primary me-2">Cookies</button>
+                <button class="btn btn-outline-primary">Bracelets</button>
+            </section>
+            <h2 class="text-center mb-4"></h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Sản phẩm 1 -->
+                <div class="col product-category cookies">
+                    <div class="card h-100">
+                        <img src="images/productImg/1.png" class="card-img-top" alt="Bánh Ngọt">
+                        <div class="card-body">
+                            <h5 class="card-title">Bánh Ngọt A</h5>
+                            <p class="card-text">Giá: 30,000 VND</p>
+                            <a href="#" class="btn btn-primary">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sản phẩm 2 -->
+                <div class="col product-category cookies">
+                    <div class="card h-100">
+                        <img src="images/productImg/2.png" class="card-img-top" alt="Bánh Ngọt">
+                        <div class="card-body">
+                            <h5 class="card-title">Bánh Ngọt B</h5>
+                            <p class="card-text">Giá: 30,000 VND</p>
+                            <a href="#" class="btn btn-primary">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sản phẩm 3 -->
+                <div class="col product-category bracelets">
+                    <div class="card h-100">
+                        <img src="images/productImg/3.png" class="card-img-top" alt="Vòng Tay">
+                        <div class="card-body">
+                            <h5 class="card-title">Vòng Tay A</h5>
+                            <p class="card-text">Giá: 50,000 VND</p>
+                            <a href="#" class="btn btn-primary">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sản phẩm 4 -->
+                <div class="col product-category bracelets">
+                    <div class="card h-100">
+                        <img src="images/productImg/4.png" class="card-img-top" alt="Vòng Tay">
+                        <div class="card-body">
+                            <h5 class="card-title">Vòng Tay B</h5>
+                            <p class="card-text">Giá: 50,000 VND</p>
+                            <a href="#" class="btn btn-primary">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Sản phẩm 5 -->
+                 <div class="col product-category cookies">
+                    <div class="card h-100">
+                        <img src="images/productImg/1.png" class="card-img-top" alt="Bánh Ngọt">
+                        <div class="card-body">
+                            <h5 class="card-title">Bánh Ngọt C</h5>
+                            <p class="card-text">Giá: 30,000 VND</p>
+                            <a href="#" class="btn btn-primary">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sản phẩm 6 -->
+                <div class="col product-category cookies">
+                    <div class="card h-100">
+                        <img src="images/productImg/1.png" class="card-img-top" alt="Bánh Ngọt">
+                        <div class="card-body">
+                            <h5 class="card-title">Bánh Ngọt D</h5>
+                            <p class="card-text">Giá: 30,000 VND</p>
+                            <a href="#" class="btn btn-primary">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Các sản phẩm khác -->
+            </div>
+        </div>
+    </section>
+    <script>
+        document.querySelectorAll('#product-filters button').forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.textContent.toLowerCase();
+                
+                document.querySelectorAll('.product-category').forEach(product => {
+                    // Nếu chọn All Products, hiển thị tất cả sản phẩm
+                    if (category === 'all products') {
+                        product.style.display = 'none';
+                        product.style.display = 'block';
+                    }
+                    // Nếu chọn Cookies, chỉ hiển thị các sản phẩm có class "cookies"
+                    else if (category === 'cookies' && product.classList.contains('cookies')) {
+                        product.style.display = 'none';
+                        product.style.display = 'block';
+                    }
+                    // Nếu chọn Bracelets, chỉ hiển thị các sản phẩm có class "bracelets"
+                    else if (category === 'bracelets' && product.classList.contains('bracelets')) {
+                        product.style.display = 'block';
+                    }
+                    // Nếu không thuộc loại nào được chọn, ẩn sản phẩm
+                    else {
+                        product.style.display = 'none';
+                    }
+                });
+        
+                // Thêm hiệu ứng chọn vào nút đã nhấn
+                document.querySelectorAll('#product-filters button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

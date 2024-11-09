@@ -1,0 +1,59 @@
+/* Phần chứa mái che */
+.awning {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    margin-top: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-color: #3e55a6;
+    padding-bottom: 20px; /* Tạo khoảng trống để phần lượn sóng hiển thị đầy đủ */
+}
+
+/* Các sọc màu xanh và trắng */
+.stripe {
+    width: 10%; /* Điều chỉnh chiều rộng của các sọc để vừa với số lượng */
+    height: 100px; /* Chiều cao của phần sọc */
+    background-color: #f8efda;
+    border: 1px solid black; /* Thêm viền đen */
+    box-sizing: border-box; /* Đảm bảo viền không làm thay đổi kích thước của sọc */
+    position: relative;
+    z-index: 2; /* Đảm bảo phần stripe nằm trên phần lượn sóng */
+}
+.stripe:nth-child(odd) {
+    background-color: #3e55a6;
+}
+
+.draw-wave {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px; /* Tạo khoảng trống để phần lượn sóng hiển thị đầy đủ */
+}
+
+/* Phần viền lượn sóng */
+.waves {
+    position: absolute;
+    bottom: 55px; /* Đẩy phần lượn sóng lên sát dưới cùng để tránh che mất sọc */
+    width: 100%;
+    height: 50px; /* Chiều cao của phần lượn sóng */
+    display: flex;
+    z-index: 1; /* Đặt phần lượn sóng dưới phần stripe */
+}
+
+/* Tạo lượn sóng */
+.wave {
+    width: 200px; /* Chiều rộng của mỗi đoạn lượn sóng */
+    height: 100px; /* Tăng chiều cao để tạo hình tròn lớn hơn */
+    background-color: #3e55a6;
+    border-radius: 50%; /* Tạo hình tròn hoàn chỉnh */
+    margin-left: -15px; /* Điều chỉnh để các đoạn sóng gối nhau vừa đủ */
+    margin-right: -15px;
+    position: relative;
+    top: -10px; /* Đẩy sóng lên trên để chúng chồng lên phần dưới của mái che */
+    clip-path: ellipse(50% 50% at 50% 50%);
+}
