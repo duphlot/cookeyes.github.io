@@ -4,7 +4,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.img-fluid {
+    margin-top: -200px;
+}
 .navbar-nav .nav-item .nav-link {
     color: #333;
 }
@@ -14,15 +16,13 @@ body {
 .marquee-container {
     background-color: #f8efd9;
     border-radius: 10px;
-    padding: 0;
     height: 30px;
-    text-align: center;
+    align-items: center;
+    width: 600px;
     color: black;
     border: 1px solid black;
     font: bold 10px Arial, sans-serif;
-    letter-spacing: 2px;
-    white-space: nowrap;
-    margin: 0;
+    letter-spacing: 2.5px;
 }
 
 .navbar {
@@ -40,11 +40,10 @@ body {
     margin-bottom: 0;
 }
 
-.nav-item.custom-nav-item:nth-child(1) { background-color: hsl(227, 100%, 76%); }
-.nav-item.custom-nav-item:nth-child(2) { background-color: #BFECFF; border-radius: 10px 10px 0 0; max-width: 100px; }
-.nav-item.custom-nav-item:nth-child(3) { background-color: #CDC1FF; border-radius: 10px 10px 0 0; }
-.nav-item.custom-nav-item:nth-child(4) { background-color: #FFF6E3; border-radius: 10px 10px 0 0; }
-.nav-item.custom-nav-item:nth-child(5) { background-color: #FFCCEA; border-radius: 10px 10px 0 0; }
+.nav-item.custom-nav-item:nth-child(1) { background-color: #BFECFF; border-radius: 10px 10px 0 0; max-width: 100px; }
+.nav-item.custom-nav-item:nth-child(2) { background-color: #CDC1FF; border-radius: 10px 10px 0 0; max-width: 100px; }
+.nav-item.custom-nav-item:nth-child(3) { background-color: #FFF6E3; border-radius: 10px 10px 0 0; max-width: 100px; }
+.nav-item.custom-nav-item:nth-child(4) { background-color: #FFCCEA; border-radius: 10px 10px 0 0; max-width: 100px; }
 
 .navbar-nav .nav-item {
     margin: 0 5px;
@@ -158,6 +157,9 @@ footer {
 }
 /* Khi màn hình nhỏ (smartphone), chia các mục navbar thành hai phần: trên và dưới */
 @media (max-width: 768px) {
+    .marquee-container {
+        width: auto;
+    }
     .navbar-nav {
         flex-direction:unset;  /* Đặt navbar thành dạng cột khi màn hình nhỏ */
         align-items: center;  /* Canh giữa các mục */
@@ -165,7 +167,7 @@ footer {
     }
 
     .navbar-nav .nav-item {
-        width: 20%;  /* Đảm bảo mỗi mục navbar chiếm toàn bộ chiều rộng */
+        width: 30%;  /* Đảm bảo mỗi mục navbar chiếm toàn bộ chiều rộng */
         text-align: center;  /* Canh giữa chữ trong từng mục */
         padding: 10px 0;
     }
