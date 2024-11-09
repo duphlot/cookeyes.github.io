@@ -215,7 +215,7 @@ footer {
         color: #333;
     }
     #team-introduction .container, #products .container, #contact .container{
-        max-height: 65dvh;
+        max-height: 80dvh;
     }
     .marquee-container {
         width: auto;
