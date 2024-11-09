@@ -5,7 +5,7 @@ body {
     padding: 0;
 }
 .img-fluid {
-    margin-top: -200px;
+    margin-bottom: auto;
 }
 .navbar-nav .nav-item .nav-link {
     color: #333;
@@ -117,6 +117,9 @@ footer {
 
 #team-introduction .container, #products .container, #contact .container{
     border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    scrollbar-width: thin;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 10px 30px;
     max-width: 1200px;
