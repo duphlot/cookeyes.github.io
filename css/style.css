@@ -3,6 +3,7 @@ body {
     color: black;
     margin: 0;
     padding: 0;
+    background-color: #FFF6E3;
 }
 .img-fluid {
     margin-bottom: auto;
@@ -21,6 +22,7 @@ body {
     width: 600px;
     color: black;
     border: 1px solid black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     font: bold 10px Arial, sans-serif;
     letter-spacing: 2.5px;
 }
@@ -123,7 +125,7 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 10px 30px;
     max-width: 1200px;
-    max-height: 85vh;
+    max-height: 86vh;
     overflow-y: auto;
     border: 1px solid #ccc;
 }
@@ -160,6 +162,13 @@ footer {
 }
 /* Khi màn hình nhỏ (smartphone), chia các mục navbar thành hai phần: trên và dưới */
 @media (max-width: 768px) {
+    body{
+        font: 12px Arial, sans-serif;
+    }
+    #team-introduction .container, #products .container, #contact .container{
+        max-height: 65dvh;
+
+    }
     .marquee-container {
         width: auto;
     }

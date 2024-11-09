@@ -57,3 +57,22 @@
     top: -10px; /* Đẩy sóng lên trên để chúng chồng lên phần dưới của mái che */
     clip-path: ellipse(50% 50% at 50% 50%);
 }
+@media (max-width: 768px) {
+    .awning {
+        height: 50px;
+    }
+    .stripe {
+        height: 50px;
+    }
+    .draw-wave {
+        height: 40px;
+    }
+    .waves {
+        bottom: 25px;
+        height: 30px;
+    }
+    .wave {
+        height: 50px;
+        top: -5px;
+    }
+}
