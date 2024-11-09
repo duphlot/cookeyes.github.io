@@ -52,7 +52,7 @@
                 <button class="btn btn-outline-primary">Bracelets</button>
             </section>
             <h2 class="text-center mb-4"></h2>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
                 <!-- Sản phẩm 1 -->
                 <div class="col product-category cookies">
                     <div class="card h-100">
@@ -119,7 +119,27 @@
                         </div>
                     </div>
                 </div>
-            
+            <style>
+                .card-body {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: rgba(0, 0, 0, 0.5);
+                    color: white;
+                    display: none;
+                    padding: 10px;
+                }
+                .card-img-top {
+                    transition: filter 0.3s ease;
+                }
+                .card:hover .card-img-top {
+                    filter: blur(2px);
+                }
+                .card:hover .card-body {
+                    display: block;
+                }
+            </style>
                 <!-- Các sản phẩm khác -->
             </div>
         </div>

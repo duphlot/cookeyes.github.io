@@ -58,7 +58,7 @@ body {
 .navbar-logo {
     height: 55px;
     width: auto;
-    margin-top: -25px;
+    margin-top: -15px;
     display: block;
 }
 
@@ -195,7 +195,7 @@ footer {
         align-items: center;  /* Canh giữa các mục */
     }
     .navbar-logo {
-        margin-top: 0;
+        margin-top: -50px;
     }
     .navbar-nav {
         flex-direction: column;  /* Chia các mục navbar thành dạng cột */
@@ -219,6 +219,7 @@ footer {
     }
     .marquee-container {
         width: auto;
+        margin-top: -30px;
     }
     .navbar-toggler {
         display: block;  /* Hiển thị nút toggle khi navbar đã được bố trí theo chiều dọc */
@@ -236,6 +237,7 @@ footer {
         width: 30%;  /* Đảm bảo mỗi mục navbar chiếm toàn bộ chiều rộng */
         text-align: center;  /* Canh giữa chữ trong từng mục */
         padding: 10px 0;
+        height: 40px;
     }
 
     /* Đảm bảo các mục navbar không bị ẩn */
