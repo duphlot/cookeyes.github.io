@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dự Án Cộng Đồng</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/draws.css">
 </head>
@@ -120,30 +121,56 @@
                     </div>
                 </div>
             <style>
+                /* Thêm viền mỏng đen xung quanh các thẻ card */
+                .card {
+                    border: 1px solid #333; /* Viền mỏng màu đen */
+                    border-radius: 10px; /* Bo góc cho các thẻ sản phẩm */
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ để thẻ nổi bật hơn */
+                }
+
+                /* Hiệu ứng khi hover */
+                .card:hover {
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Tăng độ bóng khi hover */
+                    transform: translateY(-5px); /* Đưa thẻ lên một chút khi hover */
+                }
+
+                /* Các thẻ card-body */
                 .card-body {
                     position: absolute;
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    background: rgba(0, 0, 0, 0.5);
+                    background: rgba(0, 0, 0, 0.5); /* Nền đen mờ cho phần text */
                     color: white;
                     display: none;
                     padding: 10px;
                 }
-                .card-img-top {
-                    transition: filter 0.3s ease;
-                }
+
+                /* Hiệu ứng khi hover */
                 .card:hover .card-img-top {
-                    filter: blur(2px);
+                    filter: blur(2px); /* Mờ hình ảnh khi hover */
                 }
+
                 .card:hover .card-body {
-                    display: block;
+                    display: block; /* Hiển thị thông tin khi hover */
                 }
             </style>
                 <!-- Các sản phẩm khác -->
             </div>
         </div>
     </section>
+    <script>
+        // Sử dụng JavaScript để thêm class 'active' khi nút được chọn
+        const buttons = document.querySelectorAll('#product-filters .btn');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(btn => btn.classList.remove('active')); // Loại bỏ 'active' từ tất cả các nút
+                button.classList.add('active'); // Thêm 'active' vào nút được chọn
+            });
+        });
+
+    </script>
     <script>
         document.querySelectorAll('#product-filters button').forEach(button => {
             button.addEventListener('click', function() {

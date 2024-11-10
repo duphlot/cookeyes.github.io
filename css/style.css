@@ -1,19 +1,102 @@
 body {
-    background: url('https://static.vecteezy.com/system/resources/thumbnails/023/116/073/small_2x/light-wood-floor-texture-generate-ai-photo.jpg') no-repeat fixed center/cover;
-    color: black;
+    background: url('https://static.vecteezy.com/system/resources/thumbnails/023/116/073/small_2x/light-wood-floor-texture-generate-ai-photo.jpg') no-repeat fixed center/cover, #f5f5f5;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #ecd8ac;
+    font-family: 'Fira Code', 'JetBrains Mono', 'Source Code Pro', monospace;
+    font-size: 16px;
+    line-height: 1.5;
 }
-.img-fluid {
-    margin-bottom: auto;
+
+h1, h2, a, p, code, pre, .navbar-nav .nav-item .nav-link, #team-introduction h2, #products h2, #team-introduction .section-title h3, #products .section-title h3, #team-introduction .section-title p, #products .section-title p {
+    font-family: 'Fira Code', 'JetBrains Mono', 'Source Code Pro', monospace;
 }
+
+h1, h2 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+code {
+    font-size: 1em;
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+pre {
+    font-size: 14px;
+    background-color: #2e2e2e;
+    color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.card-text {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.card.bg-light .card-text {
+    color: #333;
+    text-shadow: none;
+}
+
+.card {
+    background: url('https://static.vecteezy.com/system/resources/thumbnails/023/116/073/small_2x/light-wood-floor-texture-generate-ai-photo.jpg') no-repeat center/cover;
+    color: white;
+}
+
 .navbar-nav .nav-item .nav-link {
     color: #333;
 }
+
+#team-introduction h2, #products h2 {
+    font-size: 32px;
+    color: #2f4f4f;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#team-introduction .section-title h3, #products .section-title h3 {
+    font-size: 24px;
+    color: #ff6f61;
+    margin-bottom: 15px;
+}
+
+#team-introduction .section-title p, #products .section-title p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.img-fluid {
+    margin-bottom: auto;
+}
+
 .carousel-inner {
     border-radius: 30px;
 }
+
 .marquee-container {
     background-color: #f8efd9;
     border-radius: 10px;
@@ -26,6 +109,7 @@ body {
     font: bold 10px Arial, sans-serif;
     letter-spacing: 2.5px;
 }
+
 .navbar {
     background: url('https://static.vecteezy.com/system/resources/thumbnails/023/116/073/small_2x/light-wood-floor-texture-generate-ai-photo.jpg') no-repeat center/cover, #e1c59a;
     color: #fff;
@@ -33,166 +117,238 @@ body {
     padding: 0;
     display: flex;
 }
+
 .navbar-nav {
     display: flex;
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
 }
+
 .nav-item.custom-nav-item:nth-child(1) { background-color: #BFECFF; border-radius: 10px 10px 0 0; max-width: 100px; }
 .nav-item.custom-nav-item:nth-child(2) { background-color: #CDC1FF; border-radius: 10px 10px 0 0; max-width: 100px; }
 .nav-item.custom-nav-item:nth-child(3) { background-color: #FFF6E3; border-radius: 10px 10px 0 0; max-width: 100px; }
 .nav-item.custom-nav-item:nth-child(4) { background-color: #FFCCEA; border-radius: 10px 10px 0 0; max-width: 100px; }
-.navbar-nav .nav-item{
+
+.navbar-nav .nav-item {
     margin: 0 5px;
     width: 200px;
     height: 50px;
     text-align: center;
     border: 1px solid black;
 }
-.new-product-tag{
-    margin:  -5px;
+
+.new-product-tag {
+    margin: -5px;
     width: 200px;
     height: 40px;
     text-align: center;
 }
+
 .navbar-logo {
     height: 55px;
     width: auto;
     margin-top: -15px;
     display: block;
 }
+
 .navbar-nav .nav-item.active {
     background-color: #ff6f61;
     color: #fff;
     border-radius: 10px;
 }
-.navbar-nav .nav-item.active .nav-link,
-.navbar-nav .nav-item:hover {
+
+.navbar-nav .nav-item.active .nav-link, .navbar-nav .nav-item:hover {
     color: #fff;
 }
+
 .nav-item.custom-nav-item:hover {
     opacity: 0.8;
 }
+
 .hero {
     background-color: #f5f5f5;
     padding: 80px 0;
 }
+
 .hero h1 {
     font-size: 50px;
     color: #fff;
 }
+
 .hero .btn {
     margin-top: 20px;
 }
+
 footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
 }
+
 #team-introduction, #products, #contact {
     background: url('https://static.vecteezy.com/system/resources/thumbnails/023/116/073/small_2x/light-wood-floor-texture-generate-ai-photo.jpg') no-repeat center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 #team-introduction .container { background-color: #BFECFF; }
 #new-products .container { background-color: #ede0c4; }
 #products .container { background-color: #CDC1FF; }
 #contact .container { background-color: #FFF6E3; }
-#product-filters button.active {
-    background-color: #007bff;
-    color: white;
-}
-#team-introduction #new-products .container {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px 30px;
-    max-height: fit-content;
-    overflow-y: hidden;
+
+#product-filters .btn {
+    background-color: #ecd8ac;
+    border-color: #ecd8ac;
+    color: black;
+    font-size: 14px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border-width: 1px;
+    text-decoration: none;
 }
 
-#team-introduction .container, #products .container, #contact .container {
+#product-filters .btn:hover {
+    background-color: #d2b98d;
+    border-color: #d2b98d;
+    color: black;
+}
+
+#product-filters .btn.active {
+    background-color: #BFECFF;
+    border-color: #BFECFF;
+    color: black;
+    border: 1px solid #333;
+    text-decoration: underline;
+}
+
+#product-filters .btn:focus {
+    outline: none;
+}
+
+#product-filters .btn:not(.active) {
+    color: black;
+    border-color: #ecd8ac;
+}
+
+#team-introduction #new-products .container, #team-introduction .container, #products .container, #contact .container {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 30px;
     border-radius: 20px;
     margin-left: 10px;
     margin-right: 10px;
     scrollbar-width: thin;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px 30px;
     max-width: 1200px;
     max-height: 86vh;
     overflow-y: auto;
     border: 1px solid #ccc;
 }
-#team-introduction h2, #products h2 {
-    font-size: 32px;
-    color: #2f4f4f;
-    text-align: center;
-    margin-bottom: 20px;
-}
+
 #team-introduction ul, #products ul {
     list-style: none;
     padding-left: 0;
 }
+
 #team-introduction ul li, #products ul li {
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
 }
-#team-introduction .section-title h3, #products .section-title h3 {
-    font-size: 24px;
-    color: #ff6f61;
-    margin-bottom: 15px;
-}
-#team-introduction .section-title p, #team-introduction .section-title ul, 
-#products .section-title p, #products .section-title ul {
-    font-size: 18px;
-    color: #444;
-    line-height: 1.6;
-}
+
 @media (max-width: 768px) {
-    body { font: 12px Arial, sans-serif; }
-    .hero h1 { font-size: 30px; }
-    .hero .btn { font-size: 12px; }
-    footer { font-size: 12px; }
-    #team-introduction h2, #products h2 { font-size: 24px; }
-    #team-introduction ul li, #products ul li { font-size: 16px; }
-    #team-introduction .section-title h3, #products .section-title h3 { font-size: 20px; }
-    #team-introduction .section-title p, #team-introduction .section-title ul,
-    #products .section-title p, #products .section-title ul { font-size: 16px; }
-    .hero { padding: 50px 0; }
+    body, .hero h1, .hero .btn, footer, #team-introduction h2, #products h2, #team-introduction ul li, #products ul li, #team-introduction .section-title h3, #products .section-title h3, #team-introduction .section-title p, #team-introduction .section-title ul, #products .section-title p, #products .section-title ul {
+        font-family: 'Fira Code', 'JetBrains Mono', 'Source Code Pro', monospace;
+    }
+
+    body {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero .btn, footer, #team-introduction ul li, #products ul li, #team-introduction .section-title p, #team-introduction .section-title ul, #products .section-title p, #products .section-title ul {
+        font-size: 16px;
+    }
+
+    #team-introduction h2, #products h2 {
+        font-size: 24px;
+    }
+
+    #team-introduction .section-title h3, #products .section-title h3 {
+        font-size: 20px;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+
     .navbar {
         flex-direction: column;
         align-items: center;
     }
-    .navbar-logo { margin-top: -50px; }
+
+    .navbar-logo {
+        margin-top: -50px;
+    }
+
     .navbar-nav {
         flex-direction: column;
         align-items: center;
         margin-top: 20px;
     }
+
     .navbar-nav .nav-item {
         width: 100%;
         text-align: center;
         padding: 10px 0;
     }
-    .navbar-nav .nav-item.active { background-color: unset; }
-    .navbar-nav .nav-item.active .nav-link,
-    .navbar-nav .nav-item:hover { color: #333; }
-    #team-introduction .container, #products .container, #contact .container { max-height: 79dvh }
-    .marquee-container { width: auto; margin-top: -30px; }
-    .navbar-toggler { display: block; }
-    .navbar-collapse { display: none; }
+
+    .navbar-nav .nav-item.active {
+        background-color: unset;
+    }
+
+    .navbar-nav .nav-item.active .nav-link, .navbar-nav .nav-item:hover {
+        color: #333;
+    }
+
+    #team-introduction .container, #products .container, #contact .container {
+        max-height: 79dvh;
+    }
+
+    .marquee-container {
+        width: auto;
+        margin-top: -30px;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-collapse {
+        display: none;
+    }
+
     .navbar-nav {
         flex-direction: unset;
         align-items: center;
         margin-top: 20px;
     }
+
     .navbar-nav .nav-item {
         width: 30%;
         text-align: center;
         padding: 10px 0;
         height: 40px;
     }
-    .navbar-collapse { display: block !important; }
-    .navbar-toggler { display: none; }
+
+    .navbar-collapse {
+        display: block !important;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
 }
