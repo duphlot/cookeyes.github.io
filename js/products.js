@@ -53,8 +53,11 @@ document.querySelectorAll('.addToCartBtn').forEach(button => {
 
 function removeFromCart(productName) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let updatedCart = cart.filter(product => product.name.trim() !== productName);
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
+    let index = cart.findIndex(product => product.name.trim() === productName);
+    if (index !== -1) {
+        cart.splice(index, 1);
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
     updateCartUI();
 }
 
