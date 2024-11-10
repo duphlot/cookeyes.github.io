@@ -135,9 +135,35 @@
 }
 
 
+#product-filters .btn , #cart-products .btn {
+    font-size: 11px;
+    padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+    #cartContainer {
+        max-height: 200px; /* Reduced height */
+    }
+
+    .cart-product {
+        padding: 10px; /* Reduced padding */
+        margin-right: 5px; /* Reduced margin */
+    }
+
+    .cart-product-title {
+        font-size: 14px; /* Reduced font size */
+    }
+
+    .cart-product-price {
+        font-size: 12px; /* Reduced font size */
+    }
+
+    .removeFromCartBtn {
+        font-size: 14px; /* Reduced font size */
+    }
 
     #product-filters .btn , #cart-products .btn {
-        font-size: 11px;
-        padding: 5px 10px;
+        font-size: 10px; /* Reduced font size */
+        padding: 5px 8px; /* Reduced padding */
     }
 }
