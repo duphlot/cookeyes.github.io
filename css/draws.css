@@ -7,7 +7,7 @@
     border-top-right-radius: 20px;
     overflow: hidden;
     position: relative;
-    background-color: #3e55a6;
+    background-color: #5b291c;
     padding-bottom: 20px;
 }
 
@@ -21,7 +21,7 @@
     z-index: 2;
 }
 .stripe:nth-child(odd) {
-    background-color: #3e55a6;
+    background-color: #5b291c;
 }
 
 .draw-wave {
@@ -45,7 +45,7 @@
 .wave {
     width: 200px;
     height: 100px;
-    background-color: #3e55a6;
+    background-color: #5b291c;
     border-radius: 50%;
     margin: 0 -15px;
     position: relative;

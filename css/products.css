@@ -33,7 +33,7 @@
     display: block; /* Show the information on hover */
 }
 #product-filters .btn, #cart-products .btn{
-    background-color: #ecd8ac;
+    background-color: #f7efd8;
     border-color: #ecd8ac;
     color: black;
     font-size: 14px;
@@ -50,7 +50,7 @@
 }
 
 #product-filters .btn.active , #cart-products .btn.active {
-    background-color: #BFECFF;
+    background-color: #A594F9;
     border-color: #BFECFF;
     color: black;
     border: 1px solid #333;
@@ -136,7 +136,6 @@
 
 
 
-@media (max-width: 768px) {
     #product-filters .btn , #cart-products .btn {
         font-size: 11px;
         padding: 5px 10px;

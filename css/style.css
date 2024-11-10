@@ -1,5 +1,5 @@
 body {
-    background: url('https://static.vecteezy.com/system/resources/thumbnails/023/116/073/small_2x/light-wood-floor-texture-generate-ai-photo.jpg') no-repeat fixed center/cover, #f5f5f5;
+    background: url('https://i.pinimg.com/736x/0b/41/25/0b41253a4041ddb57004d633e4979430.jpg') no-repeat fixed center/cover, #f5f5f5;
     color: #333;
     margin: 0;
     padding: 0;
@@ -62,7 +62,7 @@ pre {
 }
 
 .card {
-    background: url('https://static.vecteezy.com/system/resources/thumbnails/023/116/073/small_2x/light-wood-floor-texture-generate-ai-photo.jpg') no-repeat center/cover;
+    background: url('https://i.pinimg.com/736x/0b/41/25/0b41253a4041ddb57004d633e4979430.jpg') no-repeat center/cover;
     color: white;
 }
 
@@ -111,7 +111,7 @@ pre {
 }
 
 .navbar {
-    background: url('https://static.vecteezy.com/system/resources/thumbnails/023/116/073/small_2x/light-wood-floor-texture-generate-ai-photo.jpg') no-repeat center/cover, #e1c59a;
+    background: url('https://i.pinimg.com/736x/0b/41/25/0b41253a4041ddb57004d633e4979430.jpg') no-repeat center/cover, #e1c59a;
     color: #fff;
     margin: 20px 0 0;
     padding: 0;
@@ -125,9 +125,9 @@ pre {
     margin-bottom: 0;
 }
 
-.nav-item.custom-nav-item:nth-child(1) { background-color: #BFECFF; border-radius: 10px 10px 0 0; max-width: 100px; }
-.nav-item.custom-nav-item:nth-child(2) { background-color: #CDC1FF; border-radius: 10px 10px 0 0; max-width: 100px; }
-.nav-item.custom-nav-item:nth-child(3) { background-color: #FFF6E3; border-radius: 10px 10px 0 0; max-width: 100px; }
+.nav-item.custom-nav-item:nth-child(1) { background-color: #FFF6E3; border-radius: 10px 10px 0 0; max-width: 100px; }
+.nav-item.custom-nav-item:nth-child(2) { background-color: #ded7fb; border-radius: 10px 10px 0 0; max-width: 100px; }
+.nav-item.custom-nav-item:nth-child(3) { background-color: #BFECFF; border-radius: 10px 10px 0 0; max-width: 100px; }
 .nav-item.custom-nav-item:nth-child(4) { background-color: #FFCCEA; border-radius: 10px 10px 0 0; max-width: 100px; }
 
 .navbar-nav .nav-item {
@@ -187,16 +187,16 @@ footer {
 }
 
 #checkout-section ,#team-introduction, #products, #contact {
-    background: url('https://static.vecteezy.com/system/resources/thumbnails/023/116/073/small_2x/light-wood-floor-texture-generate-ai-photo.jpg') no-repeat center/cover;
+    background: url('https://i.pinimg.com/736x/0b/41/25/0b41253a4041ddb57004d633e4979430.jpg') no-repeat center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#team-introduction .container { background-color: #BFECFF; }
-#new-products .container{ background-color: #ede0c4; }
-#products .container, #checkout-section .container { background-color: #CDC1FF; }
-#contact .container { background-color: #FFF6E3; }
+#team-introduction .container { background-color: #FFF6E3; }
+#new-products .container{ background-color: #d29c7e; }
+#products .container, #checkout-section .container { background-color: #ded7fb; }
+#contact .container { background-color: #BFECFF; }
 
 
 
