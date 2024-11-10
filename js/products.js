@@ -1,3 +1,35 @@
+document.querySelectorAll('#product-filters button').forEach(button => {
+    button.addEventListener('click', function() {
+        const category = this.textContent.toLowerCase();
+        
+        document.querySelectorAll('.product-category').forEach(product => {
+            // Nếu chọn All Products, hiển thị tất cả sản phẩm
+            if (category === 'all products') {
+                product.style.display = 'none';
+                product.style.display = 'block';
+            }
+            // Nếu chọn Cookies, chỉ hiển thị các sản phẩm có class "cookies"
+            else if (category === 'cookies' && product.classList.contains('cookies')) {
+                product.style.display = 'none';
+                product.style.display = 'block';
+            }
+            // Nếu chọn Bracelets, chỉ hiển thị các sản phẩm có class "bracelets"
+            else if (category === 'bracelets' && product.classList.contains('bracelets')) {
+                product.style.display = 'block';
+            }
+            // Nếu không thuộc loại nào được chọn, ẩn sản phẩm
+            else {
+                product.style.display = 'none';
+            }
+        });
+
+        // Thêm hiệu ứng chọn vào nút đã nhấn
+        document.querySelectorAll('#product-filters button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        this.classList.add('active');
+    });
+});
 document.addEventListener('DOMContentLoaded', function() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     updateCartCount(cart.length);
