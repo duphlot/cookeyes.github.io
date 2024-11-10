@@ -186,7 +186,7 @@ footer {
     padding: 20px 0;
 }
 
-#team-introduction, #products, #contact {
+#checkout-section ,#team-introduction, #products, #contact {
     background: url('https://static.vecteezy.com/system/resources/thumbnails/023/116/073/small_2x/light-wood-floor-texture-generate-ai-photo.jpg') no-repeat center/cover;
     display: flex;
     justify-content: center;
@@ -194,45 +194,13 @@ footer {
 }
 
 #team-introduction .container { background-color: #BFECFF; }
-#new-products .container { background-color: #ede0c4; }
-#products .container { background-color: #CDC1FF; }
+#new-products .container{ background-color: #ede0c4; }
+#products .container, #checkout-section .container { background-color: #CDC1FF; }
 #contact .container { background-color: #FFF6E3; }
 
-#product-filters .btn {
-    background-color: #ecd8ac;
-    border-color: #ecd8ac;
-    color: black;
-    font-size: 14px;
-    padding: 5px 12px;
-    border-radius: 20px;
-    border-width: 1px;
-    text-decoration: none;
-}
 
-#product-filters .btn:hover {
-    background-color: #d2b98d;
-    border-color: #d2b98d;
-    color: black;
-}
 
-#product-filters .btn.active {
-    background-color: #BFECFF;
-    border-color: #BFECFF;
-    color: black;
-    border: 1px solid #333;
-    text-decoration: underline;
-}
-
-#product-filters .btn:focus {
-    outline: none;
-}
-
-#product-filters .btn:not(.active) {
-    color: black;
-    border-color: #ecd8ac;
-}
-
-#team-introduction #new-products .container, #team-introduction .container, #products .container, #contact .container {
+#team-introduction #new-products .container,#checkout-section .container, #team-introduction .container, #products .container, #contact .container {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 10px 30px;
     border-radius: 20px;
@@ -245,12 +213,12 @@ footer {
     border: 1px solid #ccc;
 }
 
-#team-introduction ul, #products ul {
+#team-introduction, #checkout-section ul, #products ul {
     list-style: none;
     padding-left: 0;
 }
 
-#team-introduction ul li, #products ul li {
+#team-introduction, #checkout-section ul li, #products ul li {
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;

@@ -1,0 +1,144 @@
+/* Add a thin black border around the cards */
+.card {
+    border: 1px solid #333; /* Thin black border */
+    border-radius: 10px; /* Rounded corners for the product cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to make the card stand out */
+}
+
+
+/* Hover effect */
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+}
+
+/* Card body */
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black transparent background for text */
+    color: white;
+    display: none;
+    padding: 10px;
+}
+
+/* Hover effect */
+.card:hover .card-img-top {
+    filter: blur(2px); /* Blur the image on hover */
+}
+
+.card:hover .card-body {
+    display: block; /* Show the information on hover */
+}
+#product-filters .btn, #cart-products .btn{
+    background-color: #ecd8ac;
+    border-color: #ecd8ac;
+    color: black;
+    font-size: 14px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border-width: 1px;
+    text-decoration: none;
+}
+
+#product-filters .btn:hover , #cart-products .btn:hover {
+    background-color: #d2b98d;
+    border-color: #d2b98d;
+    color: black;
+}
+
+#product-filters .btn.active , #cart-products .btn.active {
+    background-color: #BFECFF;
+    border-color: #BFECFF;
+    color: black;
+    border: 1px solid #333;
+    text-decoration: underline;
+}
+
+#product-filters .btn:focus , #cart-products .btn:focus {
+    outline: none;
+}
+
+#product-filters .btn:not(.active) , #cart-products .btn:not(.active) {
+    color: black;
+    border-color: #ecd8ac;
+}
+#cartContainer {
+    display: flex;
+    flex-direction: column;
+    max-height: 250px; /* Reduced height */
+    width: 100%;
+    overflow-y: auto;
+    padding-right: 10px;
+    position: relative;
+    border-radius: 8px; /* Slightly smaller border radius */
+}
+
+.cart-product {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc; /* Lighter border color */
+    margin: 2px 0;
+    padding: -20px; /* Reduced padding */
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px; /* Slightly smaller border radius */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cart-product:hover {
+    transform: translateY(-3px); /* Slightly smaller lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly smaller shadow on hover */
+}
+
+.cart-product-title {
+    font-size:60%;
+    font-weight: bold;
+    color: #333;
+    margin-left: 5%;
+    flex: 1;
+}
+
+.cart-product-price {
+    font-size:50%;
+    color: #666;
+    flex: 0 0 auto;
+}
+
+.removeFromCartBtn {
+    font-size: 16px; /* Reduced font size */
+    cursor: pointer;
+    color: #ff6b6b;
+    background: none;
+    border: none;
+    transition: color 0.2s;
+    margin-left: 10px;
+}
+
+.removeFromCartBtn:hover {
+    color: #ff3b3b;
+}
+
+#cartContainer::-webkit-scrollbar {
+    width: 4px; /* Smaller width */
+    display: none; /* Hide scrollbar */
+}
+
+#cartContainer::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+    #product-filters .btn , #cart-products .btn {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+}
