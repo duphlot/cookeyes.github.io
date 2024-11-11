@@ -62,8 +62,8 @@
                         <div class="mb-3">
                             <label for="billing-address" class="form-label">/ Nhận hàng ở đâu</label>
                             <select class="form-control" id="billing-address" required onchange="toggleOtherAddress(this)">
-                                <option value="HCMUT CS Dĩ An">Đại học Bách Khoa cơ sở Dĩ An</option>
-                                <option value="HCMUT CS Thủ Đức">Đại học Bách Khoa cơ sở Thủ Đức</option>
+                                <option value="HCMUT CS Dĩ An">Đại học Bách Khoa cơ sở Lý Thường Kiệt</option>
+                                <option value="HCMUT CS Thủ Đức">Đại học Bách Khoa cơ sở Dĩ An</option>
                                 <option value="other">Nơi Khác</option>
                             </select>
                             <input type="text" class="form-control mt-2" id="other-address" placeholder="Nhập địa chỉ khác" style="display: none;">
@@ -103,35 +103,68 @@
                     </div>
                 </div>
                 <div class="text-center mt-4">
-                    <button type="submit" class="btn btn-primary w-50">Place Order</button>
+                    <button type="submit" class="btn btn-primary w-50" onclick="showLoading()">Place Order</button>
                 </div>
+                
+                <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1049;"></div>
+                
                 <div id="loading" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1050;">
                     <div class="spinner-border" role="status">
                         <span class="visually-hidden">Loading...</span>
                     </div>
                 </div>
-                <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);
                 <div id="success" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1050; text-align: center;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
-                        <path d="M15.854 5.146a.5.5 0 0 0-.708-.708L7 12.293 3.854 9.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l8-8z"/>
-                        <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0-1A6 6 0 1 1 8 2a6 6 0 0 1 0 12z"/>
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="green" stroke-width="2" />
+                        <path id="checkmark" d="M6 12l4 4 8-8" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
+                
+                <style>
+                    /* Checkmark animation */
+                    #success svg {
+                        animation: fadeIn 0.5s ease forwards;
+                    }
+                
+                    /* Draw checkmark animation */
+                    #checkmark {
+                        stroke-dasharray: 22; /* length of the checkmark path */
+                        stroke-dashoffset: 22;
+                        animation: draw 1s ease forwards;
+                    }
+                
+                    /* Fade in animation for the whole SVG */
+                    @keyframes fadeIn {
+                        from { opacity: 0; transform: scale(0.9); }
+                        to { opacity: 1; transform: scale(1); }
+                    }
+                
+                    /* Draw checkmark animation */
+                    @keyframes draw {
+                        from { stroke-dashoffset: 22; }
+                        to { stroke-dashoffset: 0; }
+                    }
+                </style>
+                
                 <script>
-                    document.getElementById('checkout-form').addEventListener('submit', function(event) {
-                        event.preventDefault();
+                    function showLoading() {
                         document.getElementById('loading').style.display = 'block';
                         document.getElementById('overlay').style.display = 'block';
+                        document.getElementById('overlay').classList.add('show');
+                
                         setTimeout(function() {
                             document.getElementById('loading').style.display = 'none';
                             document.getElementById('success').style.display = 'block';
+                
                             setTimeout(function() {
                                 document.getElementById('success').style.display = 'none';
+                                document.getElementById('overlay').classList.remove('show');
                                 document.getElementById('overlay').style.display = 'none';
-                            }, 2000); // Display success message for 2 seconds
-                        }, 2000); // Simulate a 2-second loading time
-                    });
+                            }, 2000); // Hiển thị biểu tượng hoàn thành trong 2 giây
+                        }, 2000); // Giả lập thời gian tải 2 giây
+                    }
                 </script>
+                
             </form>
         </div>
     </section>
