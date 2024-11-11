@@ -151,26 +151,26 @@
         </h5>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card" style="border-radius: 20px; margin-top: 15px;">
+                <div class="cardproduct1 col-lg-3 col-md-6 mb-4" style="padding: -5%;">
+                    <div class="card top" style="border-radius: 20px;">
                         <img src="images/productImg/7.png" style="border-radius: 20px;" class="card-img-top img-fluid" alt="New Product 1">
                         <div class="corner-label bottom-right">Vòng Tay Giáng Sinh</div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card" style="border-radius: 20px; margin-top: 15px;">
+                <div class="cardproduct2 col-lg-3 col-md-6 mb-4">
+                    <div class="card top" style="border-radius: 20px;">
                         <img src="images/productImg/2.png" style="border-radius: 20px;" class="card-img-top img-fluid" alt="New Product 2">
                         <div class="corner-label bottom-right">Top 1 bán chạy</div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card" style="border-radius: 20px; margin-top: 15px;">
+                <div class="cardproduct1 col-lg-3 col-md-6 mb-4">
+                    <div class="card bot" style="border-radius: 20px;">
                         <img src="images/productImg/3.png" style="border-radius: 20px;" class="card-img-top img-fluid" alt="New Product 3">
                         <div class="corner-label bottom-right">Vừa đẹp vừa ngon</div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card" style="border-radius: 20px; margin-top: 15px;">
+                <div class="cardproduct2 col-lg-3 col-md-6 mb-4">
+                    <div class="card bot" style="border-radius: 20px;">
                         <img src="images/productImg/4.png" style="border-radius: 20px;" class="card-img-top img-fluid" alt="New Product 4">
                         <div class="corner-label bottom-right">HOT!!</div>
                     </div>
@@ -179,6 +179,9 @@
         </div>
         
         <style>
+            .card{
+                margin-top: 15px;
+            }
             .bottom-right {
                 position: absolute;
                 bottom: 10px;
@@ -196,7 +199,7 @@
                 margin-bottom: 15px; /* Điều chỉnh khoảng cách giữa các ảnh */
             }
             /* Tạo băng rôn chéo ở góc trái trên */
-            .card {
+            .card{
                 position: relative; /* Để băng rôn nằm chồng lên hình ảnh */
             }
 
@@ -238,6 +241,10 @@
                     border: 1px solid #333;
                     border-radius: 15px;
                 }
+                
+                .bot{
+                    margin-top: -15px;
+                }
 
                 .card-img-top {
                     object-fit: cover;
@@ -259,8 +266,8 @@
             /* Khi màn hình có độ rộng lớn hơn 768px, bố cục mặc định 4 ảnh trên một hàng */
             @media (min-width: 768px) {
                 .col-lg-3 {
-                    flex: 0 0 25%; /* 4 ảnh trên mỗi hàng cho màn hình lớn hơn */
-                    max-width: 25%;
+                    max-width: 24%;
+                    margin-right: 1%; /* Giảm khoảng cách giữa các ảnh */
                 }
             }
 

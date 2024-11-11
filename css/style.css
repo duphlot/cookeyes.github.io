@@ -199,8 +199,16 @@ footer {
 #contact .container { background-color: #BFECFF; }
 #more .container { background-color: #FFCCEA; }
 
+#team-introduction #new-products .container{
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    scrollbar-width: none;
+}
 
-#more .container, #team-introduction #new-products .container,#checkout-section .container, #team-introduction .container, #products .container, #contact .container {
+#more .container,#checkout-section .container, #team-introduction .container, #products .container, #contact .container {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 10px 30px;
     border-radius: 20px;
@@ -225,6 +233,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+    #more .container,#checkout-section .container, #team-introduction .container, #products .container, #contact .container {
+        padding-left: 5px;
+        padding-right: 10px;
+    }
     body, .hero h1, .hero .btn, footer, #team-introduction h2, #products h2, #team-introduction ul li, #products ul li, #team-introduction .section-title h3, #products .section-title h3, #team-introduction .section-title p, #team-introduction .section-title ul, #products .section-title p, #products .section-title ul {
         font-family: 'Fira Code', 'JetBrains Mono', 'Source Code Pro', monospace;
     }
@@ -244,7 +256,15 @@ footer {
     #team-introduction h2, #products h2 {
         font-size: 24px;
     }
-
+    #team-introduction #new-products .container{
+        padding-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .cardproduct2{
+        padding-left: 0px;
+    }
     #team-introduction .section-title h3, #products .section-title h3 {
         font-size: 20px;
     }
