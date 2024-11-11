@@ -8,40 +8,88 @@ function toggleOtherAddress(select) {
         otherAddressInput.required = false;
     }
 }
-window.addEventListener('DOMContentLoaded', function() {
-    // Retrieve cart data from localStorage
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Get the element where we will display the cart items
+window.addEventListener('DOMContentLoaded', function() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartItemsContainer = document.getElementById('cartItems');
     const subtotalElement = document.getElementById('subtotal');
-
+    const discountCombosContainer = document.getElementById('discountCombos');
     let subtotal = 0;
+    let cookiesCount = 0;
+    let braceletsCount = 0;
 
-    // Loop through the cart items and create HTML for each
-    cartItemsContainer.innerHTML = ''; // Clear the existing cart content
     cart.forEach(item => {
-        // Create a new div for each product in the cart
+        if (item.style) {
+            cookiesCount++;
+        } else {
+            braceletsCount++;
+        }
+        subtotal += parseInt(item.price.replace(/\D/g, ''));
+    });
+
+    let discount = 0;
+    const discountCombos = [];
+
+    while (cookiesCount >= 10) {
+        discount += 25000;
+        cookiesCount -= 10;
+        discountCombos.push("Combo 10 cookies - Discount 25,000 VND");
+    }
+
+    while (cookiesCount >= 5) {
+        discount += 10000;
+        cookiesCount -= 5;
+        discountCombos.push("Combo 5 cookies - Discount 10,000 VND");
+    }
+
+    while (cookiesCount >= 2 && braceletsCount >= 1) {
+        discount += 5000;
+        cookiesCount -= 2;
+        braceletsCount -= 1;
+        discountCombos.push("Combo 2 cookies + 1 bracelet - Discount 5,000 VND");
+    }
+
+    while (braceletsCount >= 2) {
+        discount += 5000;
+        braceletsCount -= 2;
+        discountCombos.push("Combo 2 bracelets - Discount 5,000 VND");
+    }
+
+    while (cookiesCount >= 2) {
+        discount += 2000;
+        cookiesCount -= 2;
+        discountCombos.push("Combo 2 cookies - Discount 2,000 VND");
+    }
+
+    const total = subtotal - discount;
+
+    cartItemsContainer.innerHTML = ''; 
+    cart.forEach(item => {
         const itemDiv = document.createElement('div');
         itemDiv.classList.add('cart-item');
         itemDiv.innerHTML = `
-            <p><strong>${item.name}</strong> - ${item.price}</p>
+            <div class="item-details">
+                <p class="item-name"><strong>${item.name}</strong> - ${item.price}</p>
+            </div>
         `;
         cartItemsContainer.appendChild(itemDiv);
-
-        // Update subtotal
-        subtotal += parseInt(item.price.replace(/\D/g, '')); // Remove non-numeric characters
     });
 
-    // Display subtotal
-    subtotalElement.textContent = `${subtotal} VND`;
+    discountCombosContainer.innerHTML = '<h3>Discounted Combos:</h3>';
+    discountCombos.forEach(combo => {
+        const comboDiv = document.createElement('div');
+        comboDiv.classList.add('discount-combo');
+        comboDiv.textContent = combo;
+        discountCombosContainer.appendChild(comboDiv);
+    });
 
-    // Form submission handling
+    subtotalElement.textContent = `${total} VND`;
+    subtotalElement.style.marginTop = '10px';
+
     const checkoutForm = document.getElementById('checkout-form');
     checkoutForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault();
 
-        // Get the values from the form
         const fullName = document.getElementById('billing-name').value;
         const email = document.getElementById('billing-email').value;
         const address = document.getElementById('billing-address').value;
@@ -49,18 +97,17 @@ window.addEventListener('DOMContentLoaded', function() {
         const day = document.getElementById('delivery-day').value;
         const time = document.getElementById('delivery-time').value;
         const otheraddress = document.getElementById('other-address').value;
-        // Prepare data to send to the Google Sheets API
+
         const orderData = {
             fullName: fullName,
             email: email,
             address: address + ' - ' + otheraddress,
-            city: day+' - '+time,
+            city: day + ' - ' + time,
             zip: zip,
-            cartItems: JSON.stringify(cart), // Convert cart items array to string
+            cartItems: JSON.stringify(cart),
             subtotal: subtotal
         };
 
-        // Replace this with the URL of your deployed Google Apps Script web app
         const googleAppsScriptUrl = 'https://script.google.com/macros/s/AKfycbxOxB3-Zdt8GKdcjMBs1A2IoPEClKI4vuCgJol8P6c8pKt9kfo7FYVCKiNk92RjhI4x0Q/exec';
         fetch(googleAppsScriptUrl, {
             method: 'POST',
@@ -68,19 +115,16 @@ window.addEventListener('DOMContentLoaded', function() {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(orderData),
-            mode: 'no-cors'  // Chế độ no-cors để thử nghiệm
+            mode: 'no-cors'
         })
         .then(response => {
             console.log('Order submitted successfully');
 
-            // Clear local storage
             localStorage.removeItem('cart');
 
-            // Clear cart display
             cartItemsContainer.innerHTML = '';
             subtotalElement.textContent = '0 VND';
 
-            // Reset form fields
             checkoutForm.reset();
         })
         .catch(error => {

@@ -41,8 +41,8 @@ document.querySelectorAll('.addToCartBtn').forEach(button => {
         const productCard = this.closest('.card');
         const productName = productCard.querySelector('.card-title').textContent.trim();
         const productPrice = productCard.querySelector('.card-text').textContent.split(':')[1].trim();
-
-        const product = { name: productName, price: productPrice };
+        const productStyle = this.closest('.product-category').classList.contains('cookies');
+        const product = { name: productName, price: productPrice , style: productStyle };
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         cart.push(product);
 
