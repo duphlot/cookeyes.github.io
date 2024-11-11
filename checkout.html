@@ -61,15 +61,38 @@
                         </div>
                         <div class="mb-3">
                             <label for="billing-address" class="form-label">/ Nhận hàng ở đâu</label>
-                            <input type="text" class="form-control" id="billing-address" required>
+                            <select class="form-control" id="billing-address" required onchange="toggleOtherAddress(this)">
+                                <option value="HCMUT CS Dĩ An">Đại học Bách Khoa cơ sở Dĩ An</option>
+                                <option value="HCMUT CS Thủ Đức">Đại học Bách Khoa cơ sở Thủ Đức</option>
+                                <option value="other">Nơi Khác</option>
+                            </select>
+                            <input type="text" class="form-control mt-2" id="other-address" placeholder="Nhập địa chỉ khác" style="display: none;">
+                        </div>
+                        <div class="mb-3 d-flex flex-column flex-md-row justify-content-between">
+                            <div class="me-2 mb-2 mb-md-0" style="flex: 1;">
+                                <label for="delivery-day" class="form-label">Chọn ngày giao hàng</label>
+                                <select class="form-control" id="delivery-day" required>
+                                    <option value="Thứ Hai">Thứ Hai</option>
+                                    <option value="Thứ Ba">Thứ Ba</option>
+                                    <option value="Thứ Tư">Thứ Tư</option>
+                                    <option value="Thứ Năm">Thứ Năm</option>
+                                    <option value="Thứ Sáu">Thứ Sáu</option>
+                                    <option value="Thứ Bảy">Thứ Bảy</option>
+                                    <option value="Chủ Nhật">Chủ Nhật</option>
+                                </select>
+                            </div>
+                            <div style="flex: 1;">
+                                <label for="delivery-time" class="form-label">Chọn thời gian giao hàng</label>
+                                <select class="form-control" id="delivery-time" required>
+                                    <option value="Sáng (8:00 - 12:00)">Sáng (8:00 - 12:00)</option>
+                                    <option value="Chiều (12:00 - 18:00)">Chiều (12:00 - 18:00)</option>
+                                    <option value="Tối (18:00 - 22:00)">Tối (18:00 - 22:00)</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="mb-3">
-                            <label for="billing-city" class="form-label"> / Thời gian nhận hàng</label>
-                            <input type="text" class="form-control" id="billing-city" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="billing-zip" class="form-label">Number / Xin số đi em</label>
-                            <input type="text" class="form-control" id="billing-zip" required>
+                            <label for="billing-number" class="form-label">Number / Xin số đi em</label>
+                            <input type="text" class="form-control" id="billing-number" required>
                         </div>
                     </div>
                     <!-- Order Summary -->
@@ -82,6 +105,33 @@
                 <div class="text-center mt-4">
                     <button type="submit" class="btn btn-primary w-50">Place Order</button>
                 </div>
+                <div id="loading" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1050;">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);
+                <div id="success" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1050; text-align: center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="green" class="bi bi-check-circle" viewBox="0 0 16 16">
+                        <path d="M15.854 5.146a.5.5 0 0 0-.708-.708L7 12.293 3.854 9.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l8-8z"/>
+                        <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0-1A6 6 0 1 1 8 2a6 6 0 0 1 0 12z"/>
+                    </svg>
+                </div>
+                <script>
+                    document.getElementById('checkout-form').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        document.getElementById('loading').style.display = 'block';
+                        document.getElementById('overlay').style.display = 'block';
+                        setTimeout(function() {
+                            document.getElementById('loading').style.display = 'none';
+                            document.getElementById('success').style.display = 'block';
+                            setTimeout(function() {
+                                document.getElementById('success').style.display = 'none';
+                                document.getElementById('overlay').style.display = 'none';
+                            }, 2000); // Display success message for 2 seconds
+                        }, 2000); // Simulate a 2-second loading time
+                    });
+                </script>
             </form>
         </div>
     </section>

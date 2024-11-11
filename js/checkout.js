@@ -1,3 +1,13 @@
+function toggleOtherAddress(select) {
+    var otherAddressInput = document.getElementById('other-address');
+    if (select.value === 'other') {
+        otherAddressInput.style.display = 'block';
+        otherAddressInput.required = true;
+    } else {
+        otherAddressInput.style.display = 'none';
+        otherAddressInput.required = false;
+    }
+}
 window.addEventListener('DOMContentLoaded', function() {
     // Retrieve cart data from localStorage
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -35,15 +45,16 @@ window.addEventListener('DOMContentLoaded', function() {
         const fullName = document.getElementById('billing-name').value;
         const email = document.getElementById('billing-email').value;
         const address = document.getElementById('billing-address').value;
-        const city = document.getElementById('billing-city').value;
-        const zip = document.getElementById('billing-zip').value;
-
+        const zip = document.getElementById('billing-number').value;
+        const day = document.getElementById('delivery-day').value;
+        const time = document.getElementById('delivery-time').value;
+        const otheraddress = document.getElementById('other-address').value;
         // Prepare data to send to the Google Sheets API
         const orderData = {
             fullName: fullName,
             email: email,
-            address: address,
-            city: city,
+            address: address + ' - ' + otheraddress,
+            city: day+' - '+time,
             zip: zip,
             cartItems: JSON.stringify(cart), // Convert cart items array to string
             subtotal: subtotal
@@ -61,7 +72,6 @@ window.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => {
             console.log('Order submitted successfully');
-            alert('Thank you for your order!');
 
             // Clear local storage
             localStorage.removeItem('cart');
