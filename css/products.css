@@ -32,6 +32,25 @@
 .card:hover .card-body {
     display: block; /* Show the information on hover */
 }
+.addToCartBtn {
+    background-color: #000000; /* Green background */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.addToCartBtn:hover {
+    background-color: #e8aaed; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
 #product-filters .btn, #cart-products .btn{
     background-color: #f7efd8;
     border-color: #ecd8ac;
