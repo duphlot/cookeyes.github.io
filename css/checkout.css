@@ -1,3 +1,119 @@
+.adjust-quantity {
+    color: #333;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    font-size: 0.9em;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+.adjust-quantity:hover {
+    background-color: #e2e6ea;
+}
+
+.quantity {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+
+.order-summary-title {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2em;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.cart-items,
+.discount-combos {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-details {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.item-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.item-price-quantity {
+    color: #555;
+    font-size: 0.9em;
+}
+
+.item-total-price {
+    font-weight: bold;
+    color: #333;
+}
+
+.trash-icon {
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.trash-icon:hover {
+    color: #d9534f;
+}
+
+/* Các combo giảm giá */
+.discount-combo {
+    font-size: 0.9em;
+    color: #333;
+    background-color: #f2f2f2;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Tổng tiền */
+.total-amount {
+    text-align: right;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 #checkout-section body {
     font-family: 'Fira Code', monospace;
     background-color: #f8f9fa;
