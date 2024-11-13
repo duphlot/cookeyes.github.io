@@ -1,56 +1,54 @@
-/* Add a thin black border around the cards */
 .card {
     border: 1px solid #333; /* Thin black border */
     border-radius: 10px; /* Rounded corners for the product cards */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to make the card stand out */
+    position: relative; /* Ensure the card is positioned relative for absolute positioning of the button */
 }
-
-
+.card-body {
+    color:#000000;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid #333; /* Thin black border */
+    background-color: #FFF6E3;
+}
+#products .card-text{
+    color: #000000;
+    text-shadow: none;
+}
 /* Hover effect */
 .card:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
     transform: translateY(-5px); /* Lift the card slightly on hover */
 }
-
-/* Card body */
-.card-body {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5); /* Black transparent background for text */
-    color: white;
-    display: none;
-    padding: 10px;
+#products img{
+    border-top-left-radius: 20px; border-top-right-radius: 20px;
+    border: 1px solid #333; /* Thin black border */
+    height: 250px;
+    width: 250px;
 }
-
-/* Hover effect */
-.card:hover .card-img-top {
-    filter: blur(2px); /* Blur the image on hover */
-}
-
-.card:hover .card-body {
-    display: block; /* Show the information on hover */
-}
-.addToCartBtn {
-    background-color: #000000; /* Green background */
+#products .addToCartBtn {
+    background-color: #ddd7fc; /* Green background */
     border: none;
-    color: white;
-    padding: 10px 20px;
+    color:#000000;
+    border: 1px solid #333;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    display: block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 0px 5px;
     cursor: pointer;
-    border-radius: 12px; /* Rounded corners */
+    border-radius: 20px; /* Rounded corners */
     transition: background-color 0.3s, transform 0.3s;
+}
+
+.card:hover .addToCartBtn {
+    display: block; /* Show the button on hover */
 }
 
 .addToCartBtn:hover {
     background-color: #e8aaed; /* Darker green on hover */
     transform: scale(1.05); /* Slightly larger on hover */
 }
+
 #product-filters .btn, #cart-products .btn{
     background-color: #f7efd8;
     border-color: #ecd8ac;
