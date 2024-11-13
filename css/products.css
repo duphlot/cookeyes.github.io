@@ -1,3 +1,13 @@
+.card:hover .card-img-hover {
+    opacity: 1;
+}
+.card-img-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+}
 .card {
     border: 1px solid #333; /* Thin black border */
     border-radius: 10px; /* Rounded corners for the product cards */
@@ -22,9 +32,7 @@
 }
 #products img{
     border-top-left-radius: 20px; border-top-right-radius: 20px;
-    border: 1px solid #333; /* Thin black border */
-    height: 250px;
-    width: 250px;
+    border: 1px solid #333; 
 }
 #products .addToCartBtn {
     background-color: #ddd7fc; /* Green background */
@@ -42,6 +50,7 @@
 
 .card:hover .addToCartBtn {
     display: block; /* Show the button on hover */
+    z-index: 1; /* Ensure the button is above the image */
 }
 
 .addToCartBtn:hover {
