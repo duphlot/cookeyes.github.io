@@ -29,3 +29,31 @@ document.querySelectorAll('.addToCartBtn').forEach(button => {
         });
     });
 });
+
+document.querySelectorAll('.carousel').forEach(function(carousel) {
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    // Xử lý sự kiện bắt đầu vuốt
+    carousel.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+    });
+
+    // Xử lý sự kiện kết thúc vuốt
+    carousel.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    // Kiểm tra hướng vuốt và điều khiển carousel
+    function handleSwipe() {
+        if (touchendX < touchstartX) {
+            // Vuốt sang trái, chuyển tới slide tiếp theo
+            carousel.querySelector('.carousel-control-next').click();
+        }
+        if (touchendX > touchstartX) {
+            // Vuốt sang phải, quay lại slide trước đó
+            carousel.querySelector('.carousel-control-prev').click();
+        }
+    }
+});
