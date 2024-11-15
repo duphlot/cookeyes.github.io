@@ -1,7 +1,7 @@
 document.querySelectorAll('.addToCartBtn').forEach(button => {
     button.addEventListener('click', function(event) {
         const cart = document.querySelector('#cartBtn');
-        const productImage = event.target.closest('.card').querySelector('img');
+        const productImage = event.target.closest('.card').querySelector('.carousel-item.active img');
         const productImageClone = productImage.cloneNode(true);
 
         const rect = productImage.getBoundingClientRect();
@@ -17,15 +17,15 @@ document.querySelectorAll('.addToCartBtn').forEach(button => {
 
         const cartRect = cart.getBoundingClientRect();
         setTimeout(() => {
-        productImageClone.style.top = `${cartRect.top}px`;
-        productImageClone.style.left = `${cartRect.left}px`;
-        productImageClone.style.width = '0px';
-        productImageClone.style.height = '0px';
-        productImageClone.style.opacity = '0';
+            productImageClone.style.top = `${cartRect.top}px`;
+            productImageClone.style.left = `${cartRect.left}px`;
+            productImageClone.style.width = '0px';
+            productImageClone.style.height = '0px';
+            productImageClone.style.opacity = '0';
         }, 100);
 
         productImageClone.addEventListener('transitionend', () => {
-        productImageClone.remove();
+            productImageClone.remove();
         });
     });
 });

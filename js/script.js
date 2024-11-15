@@ -19,14 +19,3 @@ for (let i = 0; i < waveCount; i++) {
     wave.classList.add('wave');
     waves.appendChild(wave);
 }
-// Tạo phần lượn sóng bên dưới mái che
-//const waves = document.createElement('div');
-//waves.classList.add('waves');
-//awning.appendChild(waves); // Đặt `waves` bên trong `awning`
-
-// Thêm các đoạn lượn sóng vào phần waves
-//for (let i = 0; i < waveCount; i++) {
-//    const wave = document.createElement('div');
-//    wave.classList.add('wave');
-//    waves.appendChild(wave);
-//}

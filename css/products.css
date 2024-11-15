@@ -1,13 +1,3 @@
-.card:hover .card-img-hover {
-    opacity: 1;
-}
-.card-img-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-}
 .card {
     border: 1px solid #333; /* Thin black border */
     border-radius: 10px; /* Rounded corners for the product cards */

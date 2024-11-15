@@ -3,27 +3,21 @@ document.querySelectorAll('#product-filters button').forEach(button => {
         const category = this.textContent.toLowerCase();
         
         document.querySelectorAll('.product-category').forEach(product => {
-            // Nếu chọn All Products, hiển thị tất cả sản phẩm
             if (category === 'all products') {
                 product.style.display = 'none';
                 product.style.display = 'block';
             }
-            // Nếu chọn Cookies, chỉ hiển thị các sản phẩm có class "cookies"
             else if (category === 'cookies' && product.classList.contains('cookies')) {
                 product.style.display = 'none';
                 product.style.display = 'block';
             }
-            // Nếu chọn Bracelets, chỉ hiển thị các sản phẩm có class "bracelets"
             else if (category === 'bracelets' && product.classList.contains('bracelets')) {
                 product.style.display = 'block';
             }
-            // Nếu không thuộc loại nào được chọn, ẩn sản phẩm
             else {
                 product.style.display = 'none';
             }
         });
-
-        // Thêm hiệu ứng chọn vào nút đã nhấn
         document.querySelectorAll('#product-filters button').forEach(btn => {
             btn.classList.remove('active');
         });
@@ -43,11 +37,9 @@ document.querySelectorAll('.addToCartBtn').forEach(button => {
         const productPrice = productCard.querySelector('.card-text').textContent.split(':')[1].trim();
         const productImage = productCard.querySelector('img').getAttribute('src');
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-        // Kiểm tra sản phẩm đã có trong giỏ chưa
         const existingProduct = cart.find(product => product.name === productName);
         if (existingProduct) {
-            existingProduct.quantity += 1; // Tăng số lượng nếu đã tồn tại
+            existingProduct.quantity += 1; 
         } else {
             const product = { name: productName, price: productPrice, image: productImage, quantity: 1 };
             cart.push(product);
@@ -61,15 +53,7 @@ document.querySelectorAll('.addToCartBtn').forEach(button => {
 function removeFromCart(productName) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const productIndex = cart.findIndex(product => product.name === productName);
-
-    if (productIndex !== -1) {
-        if (cart[productIndex].quantity > 1) {
-            cart[productIndex].quantity -= 1; // Giảm số lượng nếu lớn hơn 1
-        } else {
-            cart.splice(productIndex, 1); // Xóa sản phẩm nếu số lượng là 1
-        }
-    }
-
+    cart.splice(productIndex, 1); 
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartUI();
 }
@@ -121,7 +105,6 @@ function displayCartProducts() {
 }
 
 function addCartButtonsEvents() {
-    // Thêm sự kiện cho nút xóa
     document.querySelectorAll('.removeFromCartBtn').forEach(button => {
         button.addEventListener('click', function() {
             const productCard = this.closest('.cart-product');
@@ -130,7 +113,6 @@ function addCartButtonsEvents() {
         });
     });
 
-    // Thêm sự kiện cho nút tăng số lượng
     document.querySelectorAll('.increaseQuantityBtn').forEach(button => {
         button.addEventListener('click', function() {
             const productCard = this.closest('.cart-product');
@@ -143,12 +125,21 @@ function addCartButtonsEvents() {
         });
     });
 
-    // Thêm sự kiện cho nút giảm số lượng
     document.querySelectorAll('.decreaseQuantityBtn').forEach(button => {
         button.addEventListener('click', function() {
             const productCard = this.closest('.cart-product');
             const productName = productCard.querySelector('.cart-product-title').textContent;
-            removeFromCart(productName);
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const productIndex = cart.findIndex(product => product.name === productName);
+            if (productIndex !== -1) {
+                if (cart[productIndex].quantity > 1) {
+                    cart[productIndex].quantity -= 1; 
+                } else {
+                    cart.splice(productIndex, 1); 
+                }
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartUI();
         });
     });
 }
