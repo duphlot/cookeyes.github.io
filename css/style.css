@@ -2,15 +2,6 @@ html, body {
     overflow-x: hidden;
     overflow-y: hidden;
 }
-* {
-    box-sizing: border-box;
-}
-
-.container {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
 body {
     background: url('https://i.pinimg.com/736x/0b/41/25/0b41253a4041ddb57004d633e4979430.jpg') no-repeat fixed center/cover, #f5f5f5;
     color: #333;

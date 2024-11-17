@@ -337,7 +337,7 @@ function renderCart() {
             city: day + ' - ' + time,
             zip: zip,
             cartItems: JSON.stringify(cart),
-            subtotal: subtotal
+            subtotal: total
         };
 
         const googleAppsScriptUrl = 'https://script.google.com/macros/s/AKfycbxOxB3-Zdt8GKdcjMBs1A2IoPEClKI4vuCgJol8P6c8pKt9kfo7FYVCKiNk92RjhI4x0Q/exec';
