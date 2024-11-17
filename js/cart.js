@@ -1,4 +1,3 @@
-// Cart Management
 let cart = [];
 const cartBtn = document.getElementById('cartBtn');
 const cartModal = document.getElementById('cartModal');
@@ -7,18 +6,15 @@ const cartCount = document.getElementById('cartCount');
 const cartItemsContainer = document.getElementById('cartItems');
 const subtotalElement = document.getElementById('subtotal');
 
-// Open cart modal
 cartBtn.addEventListener('click', () => {
     cartModal.style.display = 'block';
     updateCartModal();
 });
 
-// Close cart modal
 closeCartBtn.addEventListener('click', () => {
     cartModal.style.display = 'none';
 });
 
-// Add item to cart
 document.querySelectorAll('.addToCartBtn').forEach(button => {
     button.addEventListener('click', function() {
         const productStyle = this.closest('.product-category').classList.contains('cookies');
@@ -32,7 +28,6 @@ document.querySelectorAll('.addToCartBtn').forEach(button => {
     });
 });
 
-// Update cart UI
 function updateCartUI() {
     cartCount.textContent = cart.length;
 }

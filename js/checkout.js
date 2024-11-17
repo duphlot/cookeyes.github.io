@@ -6,9 +6,9 @@ function adjustQuantity(action, index) {
     } else if (action === 'decrease' && quantity > 1) {
         quantity--;
     }
-    cart[index].quantity = quantity; // Cập nhật lại số lượng
-    localStorage.setItem('cart', JSON.stringify(cart)); // Lưu lại vào localStorage
-    renderCart(); // Cập nhật giao diện giỏ hàng
+    cart[index].quantity = quantity; 
+    localStorage.setItem('cart', JSON.stringify(cart)); 
+    renderCart(); 
 }
 
 function updateSubtotal() {
