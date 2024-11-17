@@ -1,9 +1,8 @@
 document.querySelectorAll('#product-filters button').forEach(button => {
     button.addEventListener('click', function() {
         const category = this.textContent.toLowerCase();
-        
         document.querySelectorAll('.product-category').forEach(product => {
-            if (category === 'all products') {
+            if (category === 'evil eye' && product.classList.contains('evileye')) {
                 product.style.display = 'none';
                 product.style.display = 'block';
             }
@@ -22,6 +21,23 @@ document.querySelectorAll('#product-filters button').forEach(button => {
             btn.classList.remove('active');
         });
         this.classList.add('active');
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const defaultCategory = 'bracelets';
+    document.querySelectorAll('.product-category').forEach(product => {
+        if (product.classList.contains(defaultCategory)) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+    document.querySelectorAll('#product-filters button').forEach(button => {
+        if (button.textContent.toLowerCase() === defaultCategory) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
