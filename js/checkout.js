@@ -335,7 +335,7 @@ function renderCart() {
             email: email,
             address: address + ' - ' + otheraddress,
             city: day + ' - ' + time,
-            zip: zip,
+            zip: '+84' + zip,
             cartItems: JSON.stringify(cart),
             subtotal: total
         };
