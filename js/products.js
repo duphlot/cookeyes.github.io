@@ -48,16 +48,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.querySelectorAll('.addToCartBtn').forEach(button => {
     button.addEventListener('click', function() {
+        const productStyle = this.closest('.product-category').classList.contains('cookies');
         const productCard = this.closest('.card');
         const productName = productCard.querySelector('.card-title').textContent.trim();
         const productPrice = productCard.querySelector('.card-text').textContent.split(':')[1].trim();
         const productImage = productCard.querySelector('img').getAttribute('src');
+
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         const existingProduct = cart.find(product => product.name === productName);
         if (existingProduct) {
             existingProduct.quantity += 1; 
         } else {
-            const product = { name: productName, price: productPrice, image: productImage, quantity: 1 };
+            const product = { name: productName, price: productPrice,style: productStyle, image: productImage, quantity: 1 };
             cart.push(product);
         }
 
