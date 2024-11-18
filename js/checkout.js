@@ -71,23 +71,13 @@ function renderCart() {
     if (count > 0) discountCombos.push("Combo 10 cookies - Discount 25,000 VND" + (count > 1 ? ` x${count}` : ''));
     
     count = 0;
-    while (cookiesCount >= 5) {
-        discount += 10000;
-        cookiesCount -= 5;
-    }
-    count = 0;
-    while (cookiesCount >= 2 && braceletsCount >= 1) {
-        discount += 5000;
-        cookiesCount -= 2;
-        braceletsCount -= 1;
-    }
     while (braceletsCount >= 2) {
         discount += 5000;
         braceletsCount -= 2;
         count++;
     }
     while (cookiesCount >= 3) {
-        discount += 2000;
+        discount += 5000;
         cookiesCount -= 3;
         count++;
     }
