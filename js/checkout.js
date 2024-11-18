@@ -57,20 +57,11 @@ function renderCart() {
             braceletsCount += quantity;
         }
     });
+
     let discount = 0;
     const discountCombos = [];
     let count = 0;
-    //discountCombos.push(`Cookies: ${cookiesCount} - Bracelets: ${braceletsCount}`);
-
-    // Tính toán các combo giảm giá
-    while (cookiesCount >= 10) {
-        discount += 25000;
-        cookiesCount -= 10;
-        count++;
-    }
-    if (count > 0) discountCombos.push("Combo 10 cookies - Discount 25,000 VND" + (count > 1 ? ` x${count}` : ''));
     
-    count = 0;
     while (braceletsCount >= 2) {
         discount += 5000;
         braceletsCount -= 2;
@@ -110,8 +101,6 @@ function renderCart() {
         `;
         cartItemsContainer.appendChild(itemDiv);
     });
-
-    // Cập nhật combo giảm giá
     discountCombosContainer.innerHTML = '';
     discountCombos.forEach(combo => {
         const comboDiv = document.createElement('div');
@@ -120,6 +109,12 @@ function renderCart() {
         discountCombosContainer.appendChild(comboDiv);
     });
     subtotalElement.textContent = `${total} VND`;
+}
+
+// Thêm sự kiện submit khi trang được tải lần đầu
+window.addEventListener('DOMContentLoaded', () => {
+    renderCart();
+
     const checkoutForm = document.getElementById('checkout-form');
     checkoutForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -132,14 +127,23 @@ function renderCart() {
         const time = document.getElementById('delivery-time').value;
         const otheraddress = document.getElementById('other-address').value;
 
+        // Lấy lại giỏ hàng và tính toán subtotal
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let subtotal = 0;
+        cart.forEach(item => {
+            const quantity = item.quantity || 1;
+            const itemPrice = parseInt(item.price.replace(/\D/g, ''));
+            subtotal += itemPrice * quantity;
+        });
+
         const orderData = {
             fullName: fullName,
             email: email,
             address: address + ' - ' + otheraddress,
             city: day + ' - ' + time,
-            zip:zip,
+            zip: zip,
             cartItems: JSON.stringify(cart),
-            subtotal: total
+            subtotal: subtotal
         };
 
         const googleAppsScriptUrl = 'https://script.google.com/macros/s/AKfycbxOxB3-Zdt8GKdcjMBs1A2IoPEClKI4vuCgJol8P6c8pKt9kfo7FYVCKiNk92RjhI4x0Q/exec';
@@ -151,13 +155,13 @@ function renderCart() {
             body: JSON.stringify(orderData),
             mode: 'no-cors'
         })
-        .then(response => {
+        .then(() => {
             console.log('Order submitted successfully');
-            
+
             localStorage.removeItem('cart');
 
-            cartItemsContainer.innerHTML = '';
-            subtotalElement.textContent = '0 VND';
+            document.getElementById('cartItems').innerHTML = '';
+            document.getElementById('subtotal').textContent = '0 VND';
 
             checkoutForm.reset();
         })
@@ -166,13 +170,12 @@ function renderCart() {
             alert('There was an error processing your order. Please try again.');
         });        
     });
-}
+});
 
+// Hàm removeItem dùng để xóa mục khỏi giỏ hàng
 function removeItem(index) {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.splice(index, 1); 
-    localStorage.setItem('cart', JSON.stringify(cart)); 
-    renderCart();
+    cart.splice(index, 1); // Xóa mục khỏi giỏ hàng
+    localStorage.setItem('cart', JSON.stringify(cart)); // Cập nhật lại localStorage
+    renderCart(); // Gọi lại renderCart để cập nhật giao diện
 }
-
-window.addEventListener('DOMContentLoaded', renderCart);
