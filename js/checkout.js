@@ -86,7 +86,7 @@ function renderCart() {
         braceletsCount -= 2;
         count++;
     }
-    while (cookiesCount >= 2) {
+    while (cookiesCount >= 3) {
         discount += 2000;
         cookiesCount -= 2;
         count++;

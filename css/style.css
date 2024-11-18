@@ -106,7 +106,7 @@ pre {
     border-radius: 10px;
     height: 30px;
     align-items: center;
-    width: 600px;
+    width: auto;
     color: black;
     border: 1px solid black;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -190,7 +190,7 @@ footer {
     padding: 20px 0;
 }
 
-#timeline-section, #checkout-section ,#team-introduction, #products, #contact, #more{
+#more, #checkout-section ,#team-introduction, #products, #contact {
     background: url('https://i.pinimg.com/736x/0b/41/25/0b41253a4041ddb57004d633e4979430.jpg') no-repeat center/cover;
     display: flex;
     justify-content: center;
@@ -202,6 +202,7 @@ footer {
 #products .container, #checkout-section .container { background-color: #ded7fb; }
 #contact .container { background-color: #BFECFF; }
 #more .container { background-color: #FFCCEA; }
+
 #team-introduction #new-products .container{
     display: flex;
     justify-content: center;
@@ -342,4 +343,5 @@ footer {
     .navbar-toggler {
         display: none;
     }
+
 }
