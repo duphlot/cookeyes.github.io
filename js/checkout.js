@@ -130,12 +130,28 @@ window.addEventListener('DOMContentLoaded', () => {
         // Lấy lại giỏ hàng và tính toán subtotal
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         let subtotal = 0;
+        let cookiesCount = 0;
+        let braceletsCount = 0;
         cart.forEach(item => {
             const quantity = item.quantity || 1;
             const itemPrice = parseInt(item.price.replace(/\D/g, ''));
             subtotal += itemPrice * quantity;
+            if (item.style) {
+                cookiesCount += quantity;
+            } else {
+                braceletsCount += quantity;
+            }
         });
-
+        let discount = 0;
+        while (braceletsCount >= 2) {
+            discount += 5000;
+            braceletsCount -= 2;
+        }
+        while (cookiesCount >= 3) {
+            discount += 5000;
+            cookiesCount -= 3;
+        }
+        subtotal -= discount;
         const orderData = {
             fullName: fullName,
             email: email,

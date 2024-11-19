@@ -83,7 +83,7 @@
     background-color: #007bff;
     color: white;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .cart-modal {
         width: 80%;
         right: 10px;

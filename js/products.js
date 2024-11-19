@@ -99,9 +99,8 @@ function displayCartProducts() {
             const itemDiv = document.createElement('div');
             itemDiv.classList.add('cart-product', 'd-flex', 'justify-content-between', 'align-items-center', 'mb-3');
             itemDiv.innerHTML = `
-            <div class="item-details d-flex align-items-center w-100">
                 <div class="flex-grow-1">
-                    <h4 class="cart-product-title mb-1" style="font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.name}</h4>
+                    <h4 class="cart-product-title mb-1" style="font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 150px;">${item.name}</h4>
                 </div>
                 <div class="d-flex align-items-center justify-content-center flex-grow-1">
                     <div class="item-price-quantity d-flex flex-column align-items-center">
@@ -114,7 +113,6 @@ function displayCartProducts() {
                     </div>
                 </div>
                 <span class="trash-icon ms-3" onclick="removeFromCart('${item.name}')">&#128465;</span>
-            </div>
             `;
             cartContainer.appendChild(itemDiv);
         });
