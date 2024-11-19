@@ -158,7 +158,7 @@ window.addEventListener('DOMContentLoaded', () => {
             address: address + ' - ' + otheraddress,
             city: day + ' - ' + time,
             zip: zip,
-            cartItems: JSON.stringify(cart),
+            cartItems: cart.map((item, index) => `${item.name} - ${item.quantity}`).join(', '),
             subtotal: subtotal
         };
 
