@@ -24,7 +24,7 @@
     border-top-left-radius: 20px; border-top-right-radius: 20px;
     border: 1px solid #333; 
 }
-#products .addToCartBtn {
+#products .addToCartBtn, .soldOut {
     background-color: #ddd7fc; /* Green background */
     border: none;
     color:#000000;
@@ -38,12 +38,12 @@
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.card:hover .addToCartBtn {
+.card:hover .addToCartBtn, .soldOut{
     display: block; /* Show the button on hover */
     z-index: 1; /* Ensure the button is above the image */
 }
 
-.addToCartBtn:hover {
+.addToCartBtn:hover , .soldOut:hover {
     background-color: #e8aaed; /* Darker green on hover */
     transform: scale(1.05); /* Slightly larger on hover */
 }
