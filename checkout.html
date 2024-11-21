@@ -70,15 +70,7 @@
                         <div class="mb-3 d-flex flex-column flex-md-row justify-content-between">
                             <div class="me-2 mb-2 mb-md-0" style="flex: 1;">
                                 <label for="delivery-day" class="form-label">Chọn ngày giao hàng</label>
-                                <select class="form-control" id="delivery-day" required>
-                                    <option value="Thứ Hai">Thứ Hai</option>
-                                    <option value="Thứ Ba">Thứ Ba</option>
-                                    <option value="Thứ Tư">Thứ Tư</option>
-                                    <option value="Thứ Năm">Thứ Năm</option>
-                                    <option value="Thứ Sáu">Thứ Sáu</option>
-                                    <option value="Thứ Bảy">Thứ Bảy</option>
-                                    <option value="Chủ Nhật">Chủ Nhật</option>
-                                </select>
+                                <input type="date" class="form-control" id="delivery-day" required min="2024-12-2" max="2024-12-7">
                             </div>
                             <div style="flex: 1;">
                                 <label for="delivery-time" class="form-label">Chọn thời gian giao hàng</label>
