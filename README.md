@@ -32,7 +32,7 @@ This project is crafted using:
 ## 👥 Meet the Team  
 - **Phan Thùy Dung**  
 - **Nguyễn Ngọc Thảo Quyên**  
-- **Lê Anh Thư**  
+- **Nguyễn Anh Thư**  
 - **Lê Quốc Anh**  
 - **Đặng Vân Anh**  
 - **Lê Ngọc Bảo Khanh**  
