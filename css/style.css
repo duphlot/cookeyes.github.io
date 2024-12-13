@@ -98,7 +98,7 @@ pre {
 }
 
 .carousel-inner {
-    border-radius: 30px;
+    border-radius: 5vh;
 }
 
 .marquee-container {
@@ -206,8 +206,6 @@ footer {
 #team-introduction #new-products .container{
     display: flex;
     justify-content: center;
-    padding-left: 10vh;
-    padding-right: 5vh;
     padding-bottom: 0px;
     scrollbar-width: none;
     height:max-content;

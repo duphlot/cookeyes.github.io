@@ -54,10 +54,10 @@
             <div class="draw-wave" id="draw-wave"></div>
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6 col-md-12 text-center mb-3 mb-lg-0">
-                    <img src="images/icon.png" alt="Icon" class="img-fluid" style="height: 90vh; ">
+                    <img src="images/icon.png" alt="Icon" class="img-fluid" style="height: 90vh; width: 90vh;">
                 </div>
                 <div class="col-lg-6 col-md-12">
-                    <div id="product-carousel" class="carousel slide" data-bs-ride="carousel" style="max-width: 100vh; margin: auto;">
+                    <div id="product-carousel" class="carousel slide" data-bs-ride="carousel" style="border-radius: 5vh;max-width: 100vh; margin: auto;">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="images/productImg/product01/IMG_2011.png" class="d-block w-100 carousel-img" alt="Product 1">
@@ -142,7 +142,7 @@
                 right: 2vh;
                 background-color: #f8efda;
                 color: black;
-                font-size: 2vh;
+                font-size: 1.6vh;
                 padding: 1vh 2vh;
                 border: 1px solid #333;
                 border-radius: 3vh;
@@ -165,7 +165,7 @@
                 color: #edcb59; /* Màu chữ */
                 font-weight: bold;
                 padding: 1vh 2.8vh;
-                font-size: 2vh;
+                font-size: 1.6vh;
                 transform: rotate(-45deg); /* Xoay băng rôn chéo */
                 transform-origin: 0 0;
                 border-radius: 10px; /* Tạo bo góc cho băng rôn */
@@ -176,7 +176,7 @@
             /* Đảm bảo các hình ảnh trong các card có kích thước bằng nhau và là hình chữ nhật */
             .card-img-top {
                 object-fit: cover; /* Đảm bảo hình ảnh có thể phủ kín không gian */
-                width: 100%; /* Chiều rộng 100% */
+                width: 50vh; /* Chiều rộng 100% */
                 height: 45vh; /* Chiều cao cố định cho hình ảnh */
                 border-bottom: 0.2vh solid #333; /* Thêm viền dưới cho hình ảnh */
             }
@@ -226,7 +226,7 @@
                 <div class="col-md-4 mb-4">
                     <div>
                         <a href="products.html">
-                            <img  style="border-radius: 4vh;" src="images/productImg/IMG_0077.png" class="card-img-top img-fluid" alt="Decorative Image 1">
+                            <img  style="border-radius: 4vh;" src="images/productImg/IMG_0077.png" class="card-img-top1 img-fluid" alt="Decorative Image 1">
                             <div>
                                 <h5 href="products.html" style="margin-top: 4vh; font-family: 'Fira Code', monospace; color: #57291b;"><strong>Handmade Products</strong></h5>
                                 <p href="products.html" style="font-family: 'Fira Code', monospace; color: #333;">Crafted with love and care.</p>
@@ -237,7 +237,7 @@
                 <div class="col-md-4 mb-4">
                     <div>
                         <a href="#">
-                            <img style="border-radius: 4vh;" src="images/decorative/decorative2.png" class="card-img-top img-fluid" alt="Decorative Image 2">
+                            <img style="border-radius: 4vh;" src="images/decorative/decorative2.png" class="card-img-top1 img-fluid" alt="Decorative Image 2">
                             <div >
                                 <h5 style="margin-top: 4vh; font-family: 'Fira Code', monospace; color: #57291b;"><strong>Support a Cause</strong></h5>
                                 <p style="font-family: 'Fira Code', monospace; color: #333;">Your purchase helps children in need.</p>
@@ -248,7 +248,7 @@
                 <div class="col-md-4 mb-4">
                     <div>
                         <a href="https://www.facebook.com/cookeyess">
-                            <img style="border-radius: 4vh;" src="images/decorative/decorative1.png" class="card-img-top img-fluid" alt="Decorative Image 3">
+                            <img style="border-radius: 4vh;" src="images/decorative/decorative1.png" class="card-img-top1 img-fluid" alt="Decorative Image 3">
                             <div>
                                 <h5 style="margin-top: 4vh; font-family: 'Fira Code', monospace; color: #57291b;"><strong>Join Our Community</strong></h5>
                                 <p style="font-family: 'Fira Code', monospace; color: #333;">Be a part of something bigger.</p>
@@ -257,6 +257,18 @@
                     </div>
                 </div>
             </div>
+            <style>
+                .card-img-top1 {
+                    object-fit: cover; /* Đảm bảo hình ảnh có thể phủ kín không gian */
+                    width: 100%; /* Chiều rộng 100% */
+                    height: 300px; /* Chiều cao cố định cho hình ảnh */
+                    border-bottom: 0.2vh solid #333; 
+                }
+                .card-img-top1:hover {
+                    transform: scale(1.05);
+                    transition: transform 0.5s;
+                }
+            </style>
             <p style="font-family: 'Fira Code', monospace; color: #333; text-align: center; line-height: 1.6; margin-top: 30px;">
                 <strong>Thank you for spreading love with us 💓🍪</strong>
             </p>
