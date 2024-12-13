@@ -1,5 +1,5 @@
 .carousel{
-    border-radius: 5vh;
+    border-radius: 30px;
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -7,12 +7,12 @@
 }
 .corner-label {
     position: absolute;
-    font-size: 2vh;
+    font-size: 12px;
     font-weight: bold;
     color: white;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 1vh;
-    border-radius: 1vh;
+    padding: 5px;
+    border-radius: 5px;
 }
 .corner-label.top-left {
     position: absolute;
@@ -21,39 +21,39 @@
     background-color: #f8efda;
     color: black;
     font-size: 12px;
-    padding: 1vh 2vh;
-    border: 0.2vh solid #333;
-    border-radius: 3vh;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 15px;
 }
 .corner-label.bottom-left {
     position: absolute;
-    bottom: 2vh;
-    left: 4vh;
+    bottom: 10px;
+    left: 20px;
     background-color: #f8efda;
     color: black;
-    font-size: 2vh;
-    padding: 1vh 2vh;
-    border: 0.2vh solid #333;
-    border-radius: 3vh;
+    font-size: 12px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 15px;
 }
 .cart-modal {
-    border-radius: 4vh;
+    border-radius: 20px;
     display: none;
     position: absolute;
-    top: 16vh;
-    right: 10vh;
+    top: 80px;
+    right: 50px;
     z-index: 1000;
     background-color: white;
-    border: 0.2vh solid #ccc;
-    padding: 4vh;
-    box-shadow: 0 0.8vh 1.8vh rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 30%;
 }
 .cart-product {
-    border: 0.2vh solid #ddd;
-    padding: 2vh;
-    margin-bottom: 2vh;
-    border-radius: 1vh;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 .cart-product-title {
     font-weight: bold;
@@ -63,10 +63,10 @@
 }
 .adjust-quantity {
     background-color: #f8f9fa;
-    border: 0.2vh solid #ddd;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    width: 5vh;
-    height: 5vh;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,4 +82,19 @@
 .active {
     background-color: #007bff;
     color: white;
+}
+@media only screen and (max-width: 800px) {
+    .cart-modal {
+        width: 80%;
+        right: 10px;
+        top: 60px;
+        padding: 10px;
+    }
+    .cart-product {
+        padding: 5px;
+    }
+    .adjust-quantity {
+        width: 25px;
+        height: 25px;
+    }
 }
