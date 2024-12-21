@@ -99,11 +99,11 @@
 
         
     <!-- Giới thiệu các mặt hàng mới -->
-    <section id="new-products" class="py-5">
-        <h5 class="new-product-tag" style="font-size: 3vh; margin-left:4vh; border-radius: 2vh 2vh 0 0; width: 30vh; text-align: center; display: inline-block; padding: 2vh; background-color: #d29c7e;">
+    <section id="new-products" class="py-5" style="margin-top: -5vh">
+        <h5 class="new-product-tag">
             <strong>New Products</strong>
         </h5>
-        <div class="container" style="min-height: max-content;">
+        <div class="container" style="min-height: max-content; overflow: hidden;">
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4" style="padding: -5%;">
                     <div class="card top" style="border-radius: 4vh;">
@@ -133,6 +133,16 @@
         </div>
         
         <style>
+            .new-product-tag {
+                font-size: 3vh; 
+                margin-left:4vh; 
+                border-radius: 2vh 2vh 0 0; 
+                width: 30vh; 
+                text-align: center; 
+                display: inline-block; 
+                padding: 2vh; 
+                background-color: #d29c7e;
+            }
             .card{
                 margin-top: 2vh;
             }
@@ -189,6 +199,16 @@
                 }
                 .bot{
                     margin-top: -2vh;
+                }
+                .new-product-tag {
+                    font-size: 2vh; 
+                    margin-left: 4vh; 
+                    border-radius: 2vh 2vh 0 0; 
+                    width: 20vh; 
+                    text-align: center; 
+                    display: inline-block; 
+                    padding: 1.8vh; 
+                    background-color: #d29c7e;
                 }
             }
             @media (min-width: 768px) {

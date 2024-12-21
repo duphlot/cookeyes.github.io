@@ -52,3 +52,28 @@
     top: -5vh;
     clip-path: ellipse(50% 50% at 50% 50%);
 }
+
+@media (max-width: 768px) {
+    .awning {
+        height: 10vh;
+    }
+
+    .stripe {
+        height: 10vh;
+    }
+
+    .draw-wave {
+        height: 7.5vh;
+    }
+
+    .waves {
+        bottom: 5vh;
+        height: 5vh;
+    }
+
+    .wave {
+        width: 10vh;
+        height: 10vh;
+        top: -2.5vh;
+    }
+}
