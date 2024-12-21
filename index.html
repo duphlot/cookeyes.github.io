@@ -105,121 +105,33 @@
         </h5>
         <div class="container" style="min-height: max-content; overflow: hidden;">
             <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4" style="padding: -5%;">
-                    <div class="card top" style="border-radius: 4vh;">
-                        <img src="images/IMG_0081.png" style="border-radius: 4vh;" class="card-img-top img-fluid" alt="New Product 1">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card top">
+                        <img src="images/IMG_0081.png" class="card-img-top" alt="New Product 1">
                         <div class="corner-label bottom-right">Christmas</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card top" style="border-radius: 4vh;">
-                        <img src="images/productImg/product05/IMG_0085.png" style="border-radius: 4vh;" class="card-img-top img-fluid" alt="New Product 2">
+                    <div class="card top">
+                        <img src="images/productImg/product05/IMG_0085.png"  class="card-img-top" alt="New Product 2">
                         <div class="corner-label bottom-right">Our Signature</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card bot" style="border-radius: 4vh;">
-                        <img src="images/productImg/IMG_0077.png" style="border-radius: 4vh;" class="card-img-top img-fluid" alt="New Product 3">
+                    <div class="card bot">
+                        <img src="images/productImg/IMG_0077.png" class="card-img-top" alt="New Product 3">
                         <div class="corner-label bottom-right">Colorful</div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card bot" style="border-radius: 4vh;">
-                        <img src="images/productImg/4.png" style="border-radius: 4vh;" class="card-img-top img-fluid" alt="New Product 4">
+                    <div class="card bot">
+                        <img src="images/productImg/4.png" class="card-img-top" alt="New Product 4">
                         <div class="corner-label bottom-right">HOT!!</div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <style>
-            .new-product-tag {
-                font-size: 3vh; 
-                margin-left:4vh; 
-                border-radius: 2vh 2vh 0 0; 
-                width: 30vh; 
-                text-align: center; 
-                display: inline-block; 
-                padding: 2vh; 
-                background-color: #d29c7e;
-            }
-            .card{
-                margin-top: 2vh;
-            }
-            .bottom-right {
-                position: absolute;
-                bottom: 2vh;
-                right: 2vh;
-                background-color: #f8efda;
-                color: black;
-                font-size: 1.6vh;
-                padding: 1vh 2vh;
-                border: 1px solid #333;
-                border-radius: 3vh;
-            }
-
-            .col-lg-3, .col-md-6 {
-                margin-bottom: 3vh; /* Điều chỉnh khoảng cách giữa các ảnh */
-            }
-            /* Tạo băng rôn chéo ở góc trái trên */
-            .card{
-                position: relative; /* Để băng rôn nằm chồng lên hình ảnh */
-            }
-
-            .card::before {
-                content: "NEW"; /* Nội dung của băng rôn */
-                position: absolute;
-                top: 4vh;
-                left: -3vh;
-                background-color: #2a59a6; /* Màu nền của băng rôn */
-                color: #edcb59; /* Màu chữ */
-                font-weight: bold;
-                padding: 1vh 2.8vh;
-                font-size: 1.6vh;
-                transform: rotate(-45deg); /* Xoay băng rôn chéo */
-                transform-origin: 0 0;
-                border-radius: 10px; /* Tạo bo góc cho băng rôn */
-                box-shadow: 0 0.8vh 1vh rgba(0, 0, 0, 0.2); /* Thêm bóng cho băng rôn */
-                z-index: 10; /* Đảm bảo băng rôn nằm trên cùng */
-            }
-
-            /* Đảm bảo các hình ảnh trong các card có kích thước bằng nhau và là hình chữ nhật */
-            .card-img-top {
-                object-fit: cover; /* Đảm bảo hình ảnh có thể phủ kín không gian */
-                width: 50vh; /* Chiều rộng 100% */
-                height: 70% width;
-                border-bottom: 0.2vh solid #333; /* Thêm viền dưới cho hình ảnh */
-            }
-
-            /* Media Queries cho màn hình nhỏ */
-            @media (max-width: 768px) {
-                .col-lg-3, .col-md-6 {
-                    flex: 0 0 50%; 
-                    max-width: 50%;
-                }
-                .bot{
-                    margin-top: -2vh;
-                }
-                .new-product-tag {
-                    font-size: 2vh; 
-                    margin-left: 4vh; 
-                    border-radius: 2vh 2vh 0 0; 
-                    width: 20vh; 
-                    text-align: center; 
-                    display: inline-block; 
-                    padding: 1.8vh; 
-                    background-color: #d29c7e;
-                }
-            }
-            @media (min-width: 768px) {
-                .col-lg-3 {
-                    max-width: 24%;
-                    margin-right: 1%; 
-                }
-            }
-
-
-        </style>
+        <link rel="stylesheet" href="css/newProducts.css">
     </section>
         <section id="about">
             <div>
@@ -282,9 +194,9 @@
             </div>
             <style>
                 .card-img-top1 {
-                    object-fit: cover; /* Đảm bảo hình ảnh có thể phủ kín không gian */
-                    width: 100%; /* Chiều rộng 100% */
-                    height: 300px; /* Chiều cao cố định cho hình ảnh */
+                    object-fit: cover; 
+                    width: 100%; 
+                    height: 300px; 
                     border-bottom: 0.2vh solid #333; 
                 }
                 .card-img-top1:hover {

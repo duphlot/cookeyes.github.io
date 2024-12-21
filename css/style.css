@@ -1,7 +1,7 @@
 html, body {
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
 }
+
 body {
     background: url('https://i.pinimg.com/736x/0b/41/25/0b41253a4041ddb57004d633e4979430.jpg') no-repeat fixed center/cover, #f5f5f5;
     color: #333;
@@ -140,6 +140,7 @@ pre {
     height: 50px;
     text-align: center;
     border: 1px solid black;
+    border-bottom: none;
 }
 
 .new-product-tag {
@@ -190,7 +191,7 @@ footer {
     padding: 20px 0;
 }
 
-#more, #checkout-section ,#team-introduction, #products, #contact {
+#more, #checkout-section, #team-introduction, #products, #contact {
     background: url('https://i.pinimg.com/736x/0b/41/25/0b41253a4041ddb57004d633e4979430.jpg') no-repeat center/cover;
     display: flex;
     justify-content: center;
@@ -198,25 +199,28 @@ footer {
 }
 
 #team-introduction .container { background-color: #FFF6E3; }
-#new-products .container{ background-color: #d29c7e; }
+#new-products .container { background-color: #d29c7e; }
 #products .container, #checkout-section .container { background-color: #ded7fb; }
 #contact .container { background-color: #BFECFF; }
 #more .container { background-color: #FFCCEA; }
 
-#team-introduction #new-products .container{
+#team-introduction #new-products .container {
     display: flex;
-    justify-content: center;
-    padding-bottom: 0px;
+    justify-content: space-around;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 18px;
     scrollbar-width: none;
-    height:max-content;
+    height: max-content;
+    border-radius: 20px;
 }
 
-
-
-#more .container,#checkout-section .container, #team-introduction .container, #products .container, #contact .container {
+#more .container, #checkout-section .container, #team-introduction .container, #products .container, #contact .container {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 10px 30px;
     border-radius: 20px;
+    border-top-right-radius: 0;
     margin-left: 10px;
     margin-right: 10px;
     scrollbar-width: thin;
@@ -239,10 +243,13 @@ footer {
 }
 
 @media (max-width: 850px) {
-    #more .container,#checkout-section .container, #team-introduction .container, #products .container, #contact .container {
+    #more .container, #checkout-section .container, #team-introduction .container, #products .container, #contact .container {
         padding-left: 5px;
         padding-right: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
+
     body, .hero h1, .hero .btn, footer, #team-introduction h2, #products h2, #team-introduction ul li, #products ul li, #team-introduction .section-title h3, #products .section-title h3, #team-introduction .section-title p, #team-introduction .section-title ul, #products .section-title p, #products .section-title ul {
         font-family: 'Fira Code', 'JetBrains Mono', 'Source Code Pro', monospace;
     }
@@ -262,15 +269,18 @@ footer {
     #team-introduction h2, #products h2 {
         font-size: 24px;
     }
-    #team-introduction #new-products .container{
-        padding-bottom: 0px;
-        padding-top: 0px;
+
+    #team-introduction #new-products .container {
+        padding-bottom: 0;
+        padding-top: 0;
         padding-left: 10px;
         padding-right: 10px;
     }
-    .cardproduct2{
-        padding-left: 0px;
+
+    .cardproduct2 {
+        padding-left: 0;
     }
+
     #team-introduction .section-title h3, #products .section-title h3 {
         font-size: 20px;
     }
@@ -280,10 +290,14 @@ footer {
     }
 
     .navbar {
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
+        margin-left: -8px;
+        margin-right: -8px;
     }
-    .navbar .container{
+
+    .navbar .container {
         margin-top: -1.5vh;
     }
 
@@ -293,7 +307,7 @@ footer {
 
     .navbar-nav {
         flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
         margin-top: 20px;
     }
 
@@ -348,5 +362,4 @@ footer {
     .navbar-toggler {
         display: none;
     }
-
 }
