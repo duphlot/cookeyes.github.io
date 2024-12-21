@@ -14,14 +14,13 @@
 }
 
 .new-product-tag {
-    font-size: 3vh; 
-    margin-left:4vh; 
-    border-radius: 2vh 2vh 0 0; 
-    width: 30vh; 
-    text-align: center; 
-    display: inline-block; 
-    padding: 2vh; 
-    margin-bottom: -30px;
+    font-size: 2.5vh;
+    margin-left: 5vh;
+    border-radius: 2vh 2vh 0 0;
+    width: 25vh;
+    text-align: center;
+    display: inline-block;
+    padding: 2vh;
     background-color: #d29c7e;
 }
 .bottom-right {
